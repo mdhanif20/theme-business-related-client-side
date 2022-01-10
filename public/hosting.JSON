@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "type": "Shared Hosting",
+      "img": "../src/images/hosting.png",
+      "text1": "Up to 2X Faster",
+      "text2": "4X More Scalable",
+      "text3": "Intuitive Dashboard",
+      "costText": "Starting",
+      "cost": "$3.00/mo*",
+      "button": "GET STARTED",
+      "buttonUrl": "#home"
+    },
+    {
+      "id": 2,
+      "type": "Reseller Hosting",
+      "img": "../src/images/hosting.png",
+      "text1": "Up to 2X Faster",
+      "text2": "4X More Scalable",
+      "text3": "Intuitive Dashboard",
+      "costText": "Starting",
+      "cost": "$3.00/mo*",
+      "button": "GET STARTED",
+      "buttonUrl": "#home"
+    },
+    {
+      "id": 1,
+      "type": "VPS Hosting",
+      "img": "../src/images/hosting.png",
+      "text1": "Up to 2X Faster",
+      "text2": "4X More Scalable",
+      "text3": "Intuitive Dashboard",
+      "costText": "Starting",
+      "cost": "$3.00/mo*",
+      "button": "GET STARTED",
+      "buttonUrl": "#home"
+    },
+    {
+      "id": 1,
+      "type": "Dedicated Hosting",
+      "img": "../src/images/hosting.png",
+      "text1": "Up to 2X Faster",
+      "text2": "4X More Scalable",
+      "text3": "Intuitive Dashboard",
+      "costText": "Starting",
+      "cost": "$3.00/mo*",
+      "button": "GET STARTED",
+      "buttonUrl": "#home"
+    }
+  ]

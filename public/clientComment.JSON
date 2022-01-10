@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "DONAL TRAMP",
+      "clientInfo": "Student, 23 years old",
+      "details": "Excellent theme, very powerfull and very versatile. Outstanding support!",
+      "rating": "4"
+    },
+    {
+      "id": 2,
+      "name": "Morshed Alam",
+      "clientInfo": "Student, 22 years old",
+      "details": "we very proudly resell hosting from @gethsot - where other companies suck, GETHOST excels!",
+      "rating": "5"
+    },
+    {
+      "id": 3,
+      "name": "Abu Bokkor",
+      "clientInfo": "Student, 23 years old",
+      "details": "I've used @Gethost for like 10yrs, no issues, good support.",
+      "rating": "5"
+    },
+    {
+      "id": 4,
+      "name": "Omar Faruk",
+      "clientInfo": "Student, 23 years old",
+      "details": "The customer support is excellent, the respond time is very fast and effective",
+      "rating": "5"
+    },
+    {
+      "id": 5,
+      "name": "Mohammad Hanif",
+      "clientInfo": "Student, 22 years old",
+      "details": "I've used @Gesthost for like 10yrs, no issues good support.",
+      "rating": "4.5"
+    },
+    {
+      "id": 6,
+      "name": "Arshad",
+      "clientInfo": "Student, 19 years old",
+      "details": "The customer support is excellent, the responed time is very fast and effective.",
+      "rating": "4.5"
+    },
+    {
+      "id": 7,
+      "name": "Arfat Hossen",
+      "clientInfo": "Student, 25 years old",
+      "details": "we very proudly resell hosting from @gethsot - where other companies suck, GETHOST excels!",
+      "rating": "5"
+    }
+  ]

@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "suffix": ".com",
+      "payment": "$3.99/year"
+    },
+    {
+      "id": 2,
+      "suffix": ".net",
+      "payment": "$3.99/year"
+    },
+    {
+      "id": 3,
+      "suffix": ".org",
+      "payment": "$4.99/year"
+    },
+    {
+      "id": 4,
+      "suffix": ".info",
+      "payment": "$5.99/year"
+    },
+    {
+      "id": 5,
+      "suffix": ".us",
+      "payment": "$10.00/year"
+    },
+    {
+      "id": 6,
+      "suffix": ".eu",
+      "payment": "$10.00/year"
+    }
+  ]
