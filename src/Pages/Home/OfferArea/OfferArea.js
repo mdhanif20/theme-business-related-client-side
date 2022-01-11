@@ -45,7 +45,7 @@ const OfferArea = () => {
         <Box sx={{my:{xs:8,md:12},py:{xs:2,md:4},borderTop: "1px solid #f1f1f1",borderBottom: "1px solid #f1f1f1"}}>
             <Container>
                 <Grid sx={{display:"flex",alignItems:"center"}} container>
-                    <Grid sx={{textAlign:"start", my:{xs:2,md:5}}} xs={12} md={5}>
+                    <Grid item sx={{textAlign:"start", my:{xs:2,md:5}}} xs={12} md={5}>
                         <Typography variant="h2" sx={{fontSize:"2.75rem"}} gutterBottom component="div">
                         Get 10% off today
                         </Typography>
@@ -53,7 +53,7 @@ const OfferArea = () => {
                         by register a domain name
                         </Typography>
                     </Grid>
-                    <Grid sx={{my:{xs:2,md:5}}}  xs={12} md={7}>
+                    <Grid item sx={{my:{xs:2,md:5}}}  xs={12} md={7}>
                        <Box className={classes.domainArea}>
                         <input className={classes.inputArea} type="text" placeholder="Enter Your Domain" />
                             <DomainSuffix></DomainSuffix>

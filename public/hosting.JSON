@@ -24,7 +24,7 @@
       "buttonUrl": "#home"
     },
     {
-      "id": 1,
+      "id": 3,
       "type": "VPS Hosting",
       "img": "../src/images/hosting.png",
       "text1": "Up to 2X Faster",
@@ -36,7 +36,7 @@
       "buttonUrl": "#home"
     },
     {
-      "id": 1,
+      "id": 4,
       "type": "Dedicated Hosting",
       "img": "../src/images/hosting.png",
       "text1": "Up to 2X Faster",

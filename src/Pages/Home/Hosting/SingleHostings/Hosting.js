@@ -8,7 +8,7 @@ import Grid from '@mui/material/Grid';
 const Hosting = (props) => {
     const {type,text1,text2,text3,img,buttonUrl}= props.hosting;
     return (
-        <Grid xs={12} md={3}>
+        <Grid item xs={12} md={3}>
                     <Card sx={{boxShadow: 0,border:"1px solid #f1f1f1",borderRadius:0}}>
                     <Typography sx={{fontSize:"1.75rem",py:3,borderBottom: "1px solid #f1f1f1"}} variant="h5" gutterBottom component="div">
                      {type}

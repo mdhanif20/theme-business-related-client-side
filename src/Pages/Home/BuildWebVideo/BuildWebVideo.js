@@ -51,13 +51,11 @@ const useStyle = makeStyles({
         background:`url(${bg})`,
         backgroundRepeat: "no-repeat",
         backgroundPositionX: "right",
-        marginBottom:"100px"
     },
     smallbg:{
         background:`url(${bg})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "bottom",
-        marginBottom:"100px"
     },
     header:{
         color: "#fff",
@@ -67,13 +65,15 @@ const useStyle = makeStyles({
         width:"70%",
         border:'55px solid #fff',
         borderRadius: "50px 50px 0px 0px",
-        marginBottom: "-60px"
+        borderBottom:"0px",
+        marginBottom: "-8px"
     },
     smallImg:{
         width:"80%",
         border:'15px solid #fff',
         borderRadius: "10px 10px 0px 0px",
-        marginBottom: "-20px"
+        marginBottom: "-7px",
+        borderBottom:"0px"
     },
     videoPlayerBtn:{
         padding: "1.4rem",
@@ -83,7 +83,7 @@ const useStyle = makeStyles({
         marginTop: "-45vh"
     },
     smallvideoPlayerBtn:{
-        padding: ".3rem",
+        padding: "1rem",
         border: "0",
         borderRadius:" 50%",
         backgroundColor: "#99FFFF",  
@@ -105,7 +105,7 @@ const BuildWebVideo = () => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     return (
-       <Box>
+       <Box sx={{pt:{xs:5,md:10}}}>
             <Box sx={{display:{xs:"none",md:"block"}}} className={classes.bg}>
                 <Typography sx={{pt:{xs:10,md:20},pb:5}} className={classes.header} variant="h5"  gutterBottom>
                 Your hands can do incredible things. Like build a website in under an hour.

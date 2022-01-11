@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "bgImg": "https://i.ibb.co/vQwhfnR/img1.jpg",
+      "icon": "https://i.ibb.co/mvYTsSM/icon1.png",
+      "header": "Choose Hosting",
+      "details": "See how brands and agencies power their influencer marketing campaigns with #paid.",
+      "button": "GET HOSTING"
+    },
+    {
+      "id": 2,
+      "bgImg": "https://i.ibb.co/4NDjMY4/img2.jpg",
+      "icon": "https://i.ibb.co/r6jzsZD/icon2.png",
+      "header": "Search a Domain",
+      "details": "See how brands and agencies power their influencer marketing campaigns with #paid.",
+      "button": "FIND NOW"
+    },
+    {
+      "id": 3,
+      "bgImg": "https://i.ibb.co/jykYB11/img3.jpg",
+      "icon": "https://i.ibb.co/b3n9CrD/icon3.png",
+      "header": "30 Days Trial",
+      "details": "See how brands and agencies power their influencer marketing campaigns with #paid.",
+      "button": "GET STARTED"
+    }
+  ]

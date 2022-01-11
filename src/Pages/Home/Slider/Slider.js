@@ -35,7 +35,7 @@ const Slider = () => {
         <>
         <Box sx={{pb:10,display:{xs:"none",md:"block"}}} className={classes.bgImage}>
             <Grid container>
-                <Grid xs={12} md={6}>
+                <Grid item xs={12} md={6}>
                 <Box   sx={{textAlign:"start",ml:{xs:5,md:20},my:30}}>
                     <Typography variant="h2" sx={{fontSize:"2.75rem"}} gutterBottom component="div">
                         Powerful Hosting, <br />
@@ -51,7 +51,7 @@ const Slider = () => {
         </Box>
         <Box sx={{pb:10,display:{xs:"block",md:"none"}}} className={classes.smallScreenbgImg}>
             <Grid container>
-                <Grid xs={12} md={6}>
+                <Grid item xs={12} md={6}>
                 <Box   sx={{textAlign:"start",ml:{xs:5,md:20},my:30}}>
                     <Typography variant="h2" sx={{fontSize:"2.30rem",color:"#fff"}} gutterBottom component="div">
                         Powerful Hosting, 

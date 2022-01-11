@@ -6,11 +6,11 @@ import CommentSlider from "./CommentSlider";
 const Comment = () => {
  
     return (
-        <Box>
+        <Box sx={{bgcolor:"#F9FDFE",py:{xs:10,md:20}}}>
             <Typography variant="h4" gutterBottom component="div">
               What clients say
             </Typography>
-            <Box sx={{mx:{xs:1,md:3}}}>
+            <Box sx={{mx:{xs:0,md:3},pt:3}}>
                 <CommentSlider></CommentSlider>
             </Box>
         </Box>

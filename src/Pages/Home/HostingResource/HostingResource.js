@@ -16,7 +16,7 @@ const HostingResource = () => {
        <Box sx={{borderBottom:"1px solid #f1f1f1",mb:12}}>
             <Container sx={{pb:3}}>
             <Grid container>
-                <Grid xs={12} md={7} sx={{textAlign:"start"}}>
+                <Grid item xs={12} md={7} sx={{textAlign:"start"}}>
                     <img src={iconImg} alt="" /> <br />
                     <Link
                     sx={{color:"black",
@@ -97,7 +97,7 @@ const HostingResource = () => {
                     </Box>
                    
                 </Grid>
-                <Grid xs={12} md={5}>
+                <Grid item xs={12} md={5}>
                     <Container sx={{mb:4,mt:{xs:8,md:0}}}>
                        <img width="100%" height="100%" src={serverImg} alt="" />
                     </Container>
