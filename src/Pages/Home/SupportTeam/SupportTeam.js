@@ -30,7 +30,7 @@ const useStyle = makeStyles({
 const SupportTeam = () => {
     const classes = useStyle();
     return (
-        <Box sx={{py:10}} className={classes.bg}>
+        <Box sx={{py:10,mb:15}} className={classes.bg}>
            <Typography variant="h4" className={classes.header} gutterBottom>
               Need help? Call our award-winning support team 24/7 at 020 7084 1810
             </Typography>

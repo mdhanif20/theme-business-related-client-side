@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BestOption = () => {
+const Option = (props) => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const BestOption = () => {
     );
 };
 
-export default BestOption;
+export default Option;

@@ -17,7 +17,7 @@ const Footer = () => {
     return (
         <Box sx={{background:`url(${bg})`,backgroundPosition: "center",
              backgroundRepeat: "no-repeat",
-             backgroundSize: "cover",pt:22}}>
+             backgroundSize: "cover",pt:18}}>
             <Container>
                 <Box sx={{borderBottom:"1px solid #f1f1f1",pb:5}}>
                 <Grid container>

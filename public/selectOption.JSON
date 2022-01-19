@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "core": "VPS1",
+      "storage": "30GB",
+      "ram": "1024MB",
+      "bandwidth": "1TB",
+      "price": "$22.00/mo"
+    },
+    {
+      "id": 2,
+      "core": "VPS2",
+      "storage": "30GB",
+      "ram": "1024MB",
+      "bandwidth": "1TB",
+      "price": "$22.00/mo"
+    },
+    {
+      "id": 3,
+      "core": "VPS3",
+      "storage": "50GB",
+      "ram": "2048MB",
+      "bandwidth": "1TB",
+      "price": "$35.00/mo"
+    },
+    {
+      "id": 4,
+      "core": "VPS4",
+      "storage": "75GB",
+      "ram": "3074MB",
+      "bandwidth": "1.5TB",
+      "price": "$50.00/mo"
+    },
+    {
+      "id": 5,
+      "core": "VPS5",
+      "storage": "100GB",
+      "ram": "4096MB",
+      "bandwidth": "2TB",
+      "price": "$66.00/mo"
+    },
+    {
+      "id": 6,
+      "core": "VPS6",
+      "storage": "250GB",
+      "ram": "10240MB",
+      "bandwidth": "5TB",
+      "price": "$165.00/mo"
+    }
+  ]

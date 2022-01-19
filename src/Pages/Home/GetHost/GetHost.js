@@ -24,7 +24,7 @@ const GetHost = () => {
         .then(data => setHosts(data))
     },[])
     return (
-        <Box sx={{my:20}}>
+        <Box sx={{my:10}}>
             <Box>
                 <h1 className={classes.header}>
                   Go with GetHost.
