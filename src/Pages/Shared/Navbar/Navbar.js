@@ -150,11 +150,11 @@ const Navbar = () => {
                 >
                   <LocalPhoneIcon sx={{mr:1}}/> <span>+8801609015767</span>
                 </Button>
-             
-                <Button key="" variant="contained" onClick={handleCloseNavMenu}  sx={{ my: 2,ml:2, color: 'white',bgcolor:"#5D64FA", display: 'block',boxShadow: 0, borderRadius:"15px"}}
+              
+                <Button key="" variant="contained" onClick={handleCloseNavMenu}  sx={{ my: 2,ml:2, color: 'white',background: "linear-gradient(to right,#677DFB,#677DFB)", display: 'block',boxShadow: 0, borderRadius:"15px"}}
                 >
                   Sing In
-                </Button>
+                </Button> 
 
             </Box>
   

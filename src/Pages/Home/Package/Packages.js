@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
 
 
 const Packages = () => {
@@ -11,7 +12,7 @@ const Packages = () => {
         <Box>
             <Container>
                 <Grid container>
-                    <Grid xs={12} md={6}>
+                    <Grid sx={{my:3}} xs={12} md={6}>
                         <Box sx={{textAlign:"start"}}>
                             <Typography variant="overline" display="block" sx={{opacity:".3"}} gutterBottom>
                                 web hosting
@@ -20,7 +21,7 @@ const Packages = () => {
                                 Trust your site to the <br />
                                 world's #1 web host.
                             </Typography>
-                            <Typography sx={{opacity:".3"}} variant="caption" display="block" gutterBottom>
+                            <Typography sx={{opacity:".3",my:3}} variant="caption" display="block" gutterBottom>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, <br /> nobis. Lorem ipsum dolor sit amet.
                             </Typography>
 
@@ -53,7 +54,85 @@ const Packages = () => {
                             </span>
                         </Box>
                     </Grid>
-                    <Grid xs={12} md={6}></Grid>
+                    <Grid xs={12} md={6} sx={{display:"flex",my:5}}>
+                        
+                            <Card sx={{width:"50%",textAlign:"center",py:5}}>
+                                <Box>
+                                <Typography variant="button" display="block" sx={{fontWeight:"600"}} gutterBottom>
+                                    Business
+                                </Typography>
+                                <Typography variant="caption" display="block" sx={{opacity:".5"}} gutterBottom>
+                                    Yearly Package
+                                </Typography>
+                                <Typography variant="h4" sx={{fontWeight:"600"}} gutterBottom component="div">
+                                    $89.<sup>99</sup>
+                                </Typography>
+                                <Typography variant="h5" display="block" sx={{opacity:".5",fontSize:"1rem"}} gutterBottom>
+                                    
+                                </Typography>
+                                <Typography variant="h5" sx={{fontSize:"16px",opacity:".4"}} gutterBottom component="div">
+                                    50GB Bandwidth <br />
+                                    Business & Finance Analysis <br />
+                                    24 hour support <br />
+                                    Customer Management
+                                </Typography>
+                                <Button 
+                                style={
+                                    {
+                                        backgroundColor: "#fff",
+                                        fontSize: "15px",
+                                        fontWeight:"600",
+                                        padding: "8px 10px",
+                                        width:"150px",
+                                        borderRadius: "30px",
+                                        boxShadow: 0,
+                                        color:"black",
+                                        margin:"15px 0px 10px 0px",
+                                        position:"revert"
+                                        }
+                                }
+                                variant="contained" href="#">Sing Up</Button>
+                                </Box>
+                            </Card>
+                      
+                        
+                            <Card sx={{width:"50%",textAlign:"center",py:5}}>
+                                <Box>
+                                <Typography variant="button" display="block" sx={{fontWeight:"600"}} gutterBottom>
+                                    Business
+                                </Typography>
+                                <Typography variant="caption" display="block" sx={{opacity:".5"}} gutterBottom>
+                                    Yearly Package
+                                </Typography>
+                                <Typography variant="h4" sx={{fontWeight:"600"}} gutterBottom component="div">
+                                    $89.<sup>99</sup>
+                                </Typography>
+                                <Typography sx={{fontSize:"16px",opacity:".4"}} variant="h5" gutterBottom component="div">
+                                    50GB Bandwidth <br />
+                                    Business & Finance Analysis <br />
+                                    24 hour support <br />
+                                    Customer Management
+                                </Typography>
+                                <Button 
+                                style={
+                                    {
+                                        backgroundColor: "#fff",
+                                        fontSize: "15px",
+                                        fontWeight:"600",
+                                        padding: "8px 10px",
+                                        width:"150px",
+                                        borderRadius: "30px",
+                                        boxShadow: 0,
+                                        color:"black",
+                                        margin:"15px 0px 10px 0px",
+                                        position:"revert"
+                                        }
+                                }
+                                variant="contained" href="#">Sing Up</Button>
+                                </Box>
+                            </Card>
+                      
+                    </Grid>
                 </Grid>
             </Container>
         </Box>
