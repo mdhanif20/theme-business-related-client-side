@@ -9,6 +9,7 @@ import Hostings from '../Hosting/Hostings';
 import HostingResource from '../HostingResource/HostingResource';
 import OfferArea from '../OfferArea/OfferArea';
 import Options from '../OptionSelection/Options';
+import Packages from '../Package/Packages';
 import Slider from '../Slider/Slider';
 import SupportTeam from '../SupportTeam/SupportTeam';
 
@@ -26,6 +27,7 @@ const Home = () => {
             <Comment></Comment>
             <DataAnalysis></DataAnalysis>
             <SupportTeam></SupportTeam>
+            <Packages></Packages>
             <GetHost></GetHost>
             <Footer></Footer>
         </div>
