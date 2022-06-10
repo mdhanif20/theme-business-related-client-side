@@ -21,7 +21,7 @@ const Packages = () => {
                                 Trust your site to the <br />
                                 world's #1 web host.
                             </Typography>
-                            <Typography sx={{opacity:".3",my:3}} variant="caption" display="block" gutterBottom>
+                            <Typography sx={{opacity:".3",my:4}} variant="caption" display="block" gutterBottom>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, <br /> nobis. Lorem ipsum dolor sit amet.
                             </Typography>
 
@@ -34,7 +34,7 @@ const Packages = () => {
                                     padding: "10px 20px",
                                     borderRadius: "30px 0px 0px 30px",
                                     boxShadow: 0,
-                                    margin:"5px 0px 40px 0px"
+                                    margin:"20px 0px 40px 0px"
                                     }
                             }
                             variant="contained">Monthly</Button>
@@ -47,7 +47,7 @@ const Packages = () => {
                                     borderRadius: "0px 30px 30px 0px",
                                     color:"black",
                                     boxShadow: 0,
-                                    margin:"5px 0px 40px 0px"
+                                    margin:"20px 0px 40px 0px"
                                     }
                             }
                             variant="contained">Yearly</Button>
@@ -56,7 +56,7 @@ const Packages = () => {
                     </Grid>
                     <Grid xs={12} md={6} sx={{display:"flex",my:5}}>
                         
-                            <Card sx={{width:"50%",textAlign:"center",py:5}}>
+                            <Card sx={{width:"50%",textAlign:"center",py:5,px:1}}>
                                 <Box>
                                 <Typography variant="button" display="block" sx={{fontWeight:"600"}} gutterBottom>
                                     Business
@@ -96,7 +96,7 @@ const Packages = () => {
                             </Card>
                       
                         
-                            <Card sx={{width:"50%",textAlign:"center",py:5}}>
+                            <Card sx={{width:"50%",textAlign:"center",py:5,px:1}}>
                                 <Box>
                                 <Typography variant="button" display="block" sx={{fontWeight:"600"}} gutterBottom>
                                     Business

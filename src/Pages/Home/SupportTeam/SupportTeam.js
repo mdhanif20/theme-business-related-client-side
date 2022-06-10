@@ -5,7 +5,7 @@ import bg from "../../../images/videobg.jpg";
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import SpaIcon from '@material-ui/icons/Spa';
-
+import Container from '@mui/material/Container';
 
 const useStyle = makeStyles({
     bg:{
@@ -31,7 +31,8 @@ const SupportTeam = () => {
     const classes = useStyle();
     return (
         <Box sx={{py:10,mb:15}} className={classes.bg}>
-           <Typography variant="h4" className={classes.header} gutterBottom>
+            <Container>
+            <Typography variant="h4" className={classes.header} gutterBottom>
               Need help? Call our award-winning support team 24/7 at 020 7084 1810
             </Typography>
             <Typography className={classes.text} variant="body1" gutterBottom>
@@ -50,6 +51,7 @@ const SupportTeam = () => {
                    }
                    }
                variant="contained"><SpaIcon className={classes.icon}/> <span>LIVE CHAT</span> </Button>
+            </Container>
         </Box>
     );
 };

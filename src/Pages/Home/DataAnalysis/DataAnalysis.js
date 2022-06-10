@@ -22,7 +22,6 @@ const useStyle = makeStyles({
     option:{
         display:"flex",
         backgroundColor:"rgb(243, 246, 249)",
-        marginBottom:"100px",
         justifyContent:"space-between",
         width:{xs:"70%",md:"100%"},
         padding:"10px 20px 7px 20px",

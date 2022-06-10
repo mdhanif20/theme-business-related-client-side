@@ -2,31 +2,37 @@
     {
       "id": 1,
       "suffix": ".com",
-      "payment": "$3.99/year"
+      "payment": "$3.99/year",
+      "price":"60.99"
     },
     {
       "id": 2,
       "suffix": ".net",
-      "payment": "$3.99/year"
+      "payment": "$3.99/year",
+      "price":"30.99"
     },
     {
       "id": 3,
       "suffix": ".org",
-      "payment": "$4.99/year"
+      "payment": "$4.99/year",
+      "price":"16.99"
     },
     {
       "id": 4,
       "suffix": ".info",
-      "payment": "$5.99/year"
+      "payment": "$5.99/year",
+      "price":"7.99"
     },
     {
       "id": 5,
       "suffix": ".us",
-      "payment": "$10.00/year"
+      "payment": "$10.00/year",
+      "price":"10.00"
     },
     {
       "id": 6,
       "suffix": ".eu",
-      "payment": "$10.00/year"
+      "payment": "$10.00/year",
+      "price":"12.00"
     }
   ]

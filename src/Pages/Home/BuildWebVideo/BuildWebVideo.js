@@ -106,7 +106,7 @@ const BuildWebVideo = () => {
     const handleClose = () => setOpen(false);
     return (
        <Box sx={{pt:{xs:5,md:10}}}>
-            <Box sx={{display:{xs:"none",md:"block"}}} className={classes.bg}>
+            <Box sx={{display:{xs:"none",md:"block",textAlign:"center"}}} className={classes.bg}>
                 <Typography sx={{pt:{xs:10,md:20},pb:5}} className={classes.header} variant="h5"  gutterBottom>
                 Your hands can do incredible things. Like build a website in under an hour.
                 </Typography>

@@ -16,14 +16,14 @@ import TableCell from '@mui/material/TableCell';
 const useStyle = makeStyles({
     header:{
         fontWeight: "300",
-        paddingBottom: "65px"
+        paddingBottom: "60px",
     },
     circle:{
         width:"20px",
         height:"20px",
-        lineHeight:"20px",
         backgroundColor:"#6633FF",
-        borderRadius:"50%"
+        borderRadius:"50%",
+        cursor:"pointer"
     },
     core:{
         width: "20px",
@@ -82,13 +82,12 @@ const Options = () => {
 
     return (
         <Box sx={{my:20}}>
-           
-             <h1 className={classes.header}>
+            <Container>
+            <h1 className={classes.header}>
                 Select Your Best Option
             </h1>
-            <Container>
                 <Box>
-                    <Box className={classes.vpsarea}>
+                    <Box style={{borderTop:"none"}} className={classes.vpsarea}>
                         <span>VPS1</span>
                         <span>VPS2</span>
                         <span>VPS3</span>
@@ -97,11 +96,47 @@ const Options = () => {
                         
                     </Box>
                     <Box className={classes.allCircle}>
-                        <p onClick={()=>vps(true,1)} id="vps1" className={classes.circle}></p>
-                        <p onClick={()=>vps(true,2)} className={classes.circle}></p> 
-                        <p onClick={()=>vps(true,3)} className={classes.circle}></p>
-                        <p onClick={()=>vps(true,4)} className={classes.circle}></p>
-                        <p onClick={()=>vps(true,5)} className={classes.circle}></p>
+                        
+                        <p onClick={()=>vps(true,1)} id="vps1"
+                         style={{width:"20px",
+                         height:"20px",
+                         backgroundColor:"#6633FF",
+                         borderRadius:"50%",
+                         cursor:"pointer"}}
+                         ></p>
+
+                        <p onClick={()=>vps(true,2)} 
+                        style={{width:"20px",
+                        height:"20px",
+                        backgroundColor:"#6633FF",
+                        borderRadius:"50%",
+                        cursor:"pointer"}}
+                        ></p> 
+
+                        <p onClick={()=>vps(true,3)} 
+                        style={{width:"20px",
+                        height:"20px",
+                        backgroundColor:"#6633FF",
+                        borderRadius:"50%",
+                        cursor:"pointer"}}
+                        ></p>
+
+                        <p onClick={()=>vps(true,4)} 
+                        style={{width:"20px",
+                        height:"20px",
+                        backgroundColor:"#6633FF",
+                        borderRadius:"50%",
+                        cursor:"pointer"}}
+                        ></p>
+
+                        <p onClick={()=>vps(true,5)} 
+                        style={{width:"20px",
+                        height:"20px",
+                        backgroundColor:"#6633FF",
+                        borderRadius:"50%",
+                        cursor:"pointer"}}
+                        ></p>
+
                     </Box>
                     
                     

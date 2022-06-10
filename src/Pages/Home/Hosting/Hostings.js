@@ -13,7 +13,7 @@ const Hostings = () => {
     },[])
 
     return (
-        <Container>
+        <Container id="hostings">
             <Grid sx={{my:{xs:10,md:20}}} container>
                 {
                     hostings.map(hosting=><Hosting key={hosting.id} hosting={hosting}></Hosting>)

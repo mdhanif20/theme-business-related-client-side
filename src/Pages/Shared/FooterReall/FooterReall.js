@@ -2,6 +2,8 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@mui/styles';
+import bg from "../../../images/footer.png";
 import Typography from '@mui/material/Typography';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -10,23 +12,29 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Button from '@mui/material/Button';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import bg from "../../../images/footer.png";
 
-const Footer = () => {
+
+const useStyle = makeStyles({
+    fullArea:{
+        background:`url(${bg})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover"
+    }
+});
+
+const FooterReall = () => {
+    const classes = useStyle();
     return (
-        <Box sx={{background:`url(${bg})`,backgroundPosition: "center",
-             backgroundRepeat: "no-repeat",
-             backgroundSize: "cover",pt:18}}>
+        <Box sx={{pt:10}} className={classes.fullArea}>
             <Container>
-                <Box sx={{borderBottom:"1px solid #f1f1f1",pb:5}}>
-                <Grid container>
-                    <Grid xs={12} md={3}>
-                        <Box sx={{textAlign:"start"}} >
-                            <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
+                <Grid container spacing={2}>
+                    <Grid xs={12} sm={3}>
+                    <Box sx={{textAlign:"start",my:5}} style={{textAlign:"start",color:"#000000",background:"none"}} >
+                            <Typography  sx={{ fontWeight: 'bold',pb:2}} variant="button" display="block" gutterBottom>
                                 company
                             </Typography>
-                            <Box sx={{ opacity:".6",py:2}}>
+                            <Box style={{ opacity:".6",py:2,display:"block"}}>
                                 <Typography variant="body1" gutterBottom>
                                     Associates
                                 </Typography>
@@ -48,12 +56,12 @@ const Footer = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid  xs={12} md={3}>
-                        <Box sx={{textAlign:"start",display:{xs:"none",sm:"block"}}} >
-                            <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
+                    <Grid xs={12} sm={3} sx={{display:{xs:"none",sm:"block"}}}>
+                    <Box style={{border:"none",padding:0,boxShadow:'none'}} sx={{textAlign:"start",my:5,display:{xs:"none",sm:"block"}}} >
+                            <Typography  sx={{ fontWeight: 'bold',pb:2}} variant="button" display="block" gutterBottom>
                                PRODUCTS
                             </Typography>
-                            <Box sx={{ opacity:".6",py:2}}>
+                            <Box style={{backgroundColor:"transparent",padding:"0px"}} sx={{ opacity:".6",py:2}}>
                                 <Typography variant="body1" gutterBottom>
                                     Shared hosting
                                 </Typography>
@@ -75,12 +83,12 @@ const Footer = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid xs={12} md={3}>
-                        <Box sx={{textAlign:"start",display:{xs:"none",sm:"none",md:"block"}}} >
+                    <Grid xs={12} sm={3} sx={{display:{xs:"none",sm:"block"}}}>
+                    <Box sx={{textAlign:"start",py:5,display:{xs:"none",sm:"none",md:"block"}}} >
                             <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                              SUPPORT
                             </Typography>
-                            <Box sx={{ opacity:".6",py:2}}>
+                            <Box style={{backgroundColor:"transparent",width:"100%"}} sx={{ opacity:".6",py:2}}>
                                 <Typography variant="body1" gutterBottom>
                                     Chat
                                 </Typography>
@@ -102,12 +110,12 @@ const Footer = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid xs={12} md={3}>
-                        <Box sx={{textAlign:"start"}} >
+                    <Grid xs={12} sm={3}>
+                    <Box style={{width:'100%'}} sx={{textAlign:"start",py:5}} >
                             <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                                 Follow us
                             </Typography>
-                            <Box sx={{display: "flex", justifyContent: "space-around",my:3}}>
+                            <Box style={{width:'100%'}} sx={{display: "flex", justifyContent: "space-around",my:3}}>
                                 <span><InstagramIcon/></span>
                                 <span><FacebookIcon/></span>
                                 <span><TwitterIcon/></span>
@@ -117,15 +125,16 @@ const Footer = () => {
                                 <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                                 SUBSCRIBE US
                                 </Typography>
-                            <Box sx={{ opacity:".6",py:2}}>
+                            <Box style={{width:"100%"}} sx={{ opacity:".6",py:2}}>
                                 
                                 <Typography variant="body1" gutterBottom>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 </Typography>
 
-                                <span style={{display:"flex",marginTop:"25px",width:"90%"}}>
+                                <span style={{display:"flex",marginTop:"25px",width:"100%"}}>
                                     <input style={{
                                             fontSize: "16px",
+                                            width:'100%',
                                             padding: "5px 10px",
                                             border: "0px",
                                             boxShadow:" inset 2px 1px 10px 19px #e8e8e8"
@@ -147,28 +156,14 @@ const Footer = () => {
                         </Box>
                     </Grid>
                 </Grid>
-                </Box>
-                <Box sx={{py:5}}>
-                    <Grid container>
-                        <Grid xs={12} md={6}>
-                            <Typography sx={{textAlign:"start"}} variant="caption" display="block" gutterBottom>
-                             © 2022 Hogash.com | All rights reserved.
-                            </Typography>
-                        </Grid>
-                        <Grid xs={12} md={6}>
-                            <Typography sx={{
-                                display:"flex",
-                                justifyContent: "flex-end",
-                                alignItems:"start"
-                                }} variant="caption" display="block" gutterBottom>
-                            <span>For emergency cases</span> <LocalPhoneIcon sx={{fontSize:"17px",mx:.5}}/> <span>+8801609015767</span>
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Box>
             </Container>
+            <Box sx={{borderTop:"1px solid rgb(203 203 203)"}}>
+            <Typography sx={{py:2,px:1}} variant="subtitle2" gutterBottom component="div">
+            © 2022 Hogash.com | All rights reserved.
+            </Typography>
+            </Box>
         </Box>
     );
 };
 
-export default Footer;
+export default FooterReall;

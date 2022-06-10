@@ -1,0 +1,9 @@
+const theme = [
+    {
+        id:1,
+        websiteImg:"#",
+        clientLink:"#",
+        serverLink:"#",
+        liveSide:"#",
+    }
+]

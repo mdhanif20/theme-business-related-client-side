@@ -7,7 +7,7 @@ const Comment = () => {
  
     return (
         <Box sx={{bgcolor:"#F9FDFE",py:{xs:10,md:20}}}>
-            <Typography variant="h4" gutterBottom component="div">
+            <Typography sx={{pl:{xs:1,sm:2,md:8}}} variant="h4" gutterBottom component="div">
               What clients say
             </Typography>
             <Box sx={{mx:{xs:0,md:3},pt:3}}>

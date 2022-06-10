@@ -3,15 +3,16 @@ import Navbar from '../../Shared/Navbar/Navbar';
 import BuildWebVideo from '../BuildWebVideo/BuildWebVideo';
 import Comment from '../ClientComment/Comment';
 import DataAnalysis from '../DataAnalysis/DataAnalysis';
-import Footer from '../Footer/Footer';
-import GetHost from '../GetHost/GetHost';
-import Hostings from '../Hosting/Hostings';
 import HostingResource from '../HostingResource/HostingResource';
-import OfferArea from '../OfferArea/OfferArea';
 import Options from '../OptionSelection/Options';
 import Packages from '../Package/Packages';
 import Slider from '../Slider/Slider';
 import SupportTeam from '../SupportTeam/SupportTeam';
+import Hostings from './../Hosting/Hostings';
+import GetHost from '../GetHost/GetHost';
+import FooterReall from '../../Shared/FooterReall/FooterReall';
+import Domain from '../Domain/Domain';
+import Theme from '../../Theme/Theme';
 
 
 const Home = () => {
@@ -19,7 +20,8 @@ const Home = () => {
         <div>
             <Navbar></Navbar>
             <Slider></Slider>
-            <OfferArea></OfferArea>
+            <Domain></Domain>
+            <Theme></Theme>
             <Hostings></Hostings>
             <HostingResource></HostingResource>
             <Options></Options>
@@ -29,7 +31,10 @@ const Home = () => {
             <SupportTeam></SupportTeam>
             <Packages></Packages>
             <GetHost></GetHost>
-            <Footer></Footer>
+            {/* <HostingArea></HostingArea>  */}
+            {/* <Footer></Footer> 
+             */}
+             <FooterReall></FooterReall>
         </div>
     );
 };

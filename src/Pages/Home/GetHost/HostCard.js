@@ -54,7 +54,8 @@ const HostCard = (props) => {
                 height:"500px",
                 borderRadius:"0px",
                 boxShadow:"0",
-                position:"relative"
+                position:"relative",
+                textAlign:"center"
                 }}>
             <Box className={classes.backgroundColor}>
                 <img className={classes.img} src={icon} alt="" />
