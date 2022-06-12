@@ -1,9 +1,147 @@
-const theme = [
+[
     {
-        id:1,
-        websiteImg:"#",
-        clientLink:"#",
-        serverLink:"#",
-        liveSide:"#",
+      "id": 1,
+      "price": "$10",
+      "review":4.7,
+      "totalReview":210,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Hospital Service Website",
+      "websiteImg": "https://i.ibb.co/Qk763TS/apollo.png",
+      "clientCodeLink": "https://github.com/mdhanif20/apollo-hospital",
+      "serverCodeLink": "https://github.com/mdhanif20/apollo-hospital-server",
+      "liveSide": "https://apollo-hospital-fe9a0.web.app/"
+    },
+    {
+        "id": 2,
+        "price": "$12",
+        "review":4.2,
+        "totalReview":190,
+        "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+        "websiteName":"Hospital Service Website",
+        "websiteImg": "https://i.ibb.co/Qk763TS/apollo.png",
+        "clientCodeLink": "https://github.com/mdhanif20/apollo-hospital",
+        "serverCodeLink": "https://github.com/mdhanif20/apollo-hospital-server",
+        "liveSide": "https://apollo-hospital-fe9a0.web.app/"
+      },
+    {
+        "id": 3,
+        "price": "$15",
+        "review":4.8,
+        "totalReview":100,
+        "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+        "websiteName":"Theme Selling Website",
+        "websiteImg": "https://i.ibb.co/pWCC5p0/theme.png",
+        "clientCodeLink": "https://github.com/mdhanif20/theme-business-related-client-side",
+        "serverCodeLink": "https://github.com/mdhanif20/theme-busness-server-side",
+        "liveSide": "https://theme-selling-website.web.app/"
+      },
+    {
+      "id": 4,
+      "price": "$8",
+      "review":5,
+      "totalReview":67,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Theme Selling Website",
+      "websiteImg": "https://i.ibb.co/pWCC5p0/theme.png",
+      "clientCodeLink": "https://github.com/mdhanif20/theme-business-related-client-side",
+      "serverCodeLink": "https://github.com/mdhanif20/theme-busness-server-side",
+      "liveSide": "https://theme-selling-website.web.app/"
+    },
+    
+    {
+      "id": 5,
+      "price": "$16",
+      "review":4.0,
+      "totalReview":84,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Theme Selling Website",
+      "websiteImg": "https://i.ibb.co/pWCC5p0/theme.png",
+      "clientCodeLink": "https://github.com/mdhanif20/theme-business-related-client-side",
+      "serverCodeLink": "https://github.com/mdhanif20/theme-busness-server-side",
+      "liveSide": "https://theme-selling-website.web.app/"
+    },
+    {
+        "id": 6,
+        "price": "$97",
+        "review":4.3,
+        "totalReview":22,
+        "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+        "websiteName":"Hospital Service Website",
+        "websiteImg": "https://i.ibb.co/Qk763TS/apollo.png",
+        "clientCodeLink": "https://github.com/mdhanif20/apollo-hospital",
+        "serverCodeLink": "https://github.com/mdhanif20/apollo-hospital-server",
+        "liveSide": "https://apollo-hospital-fe9a0.web.app/"
+      },
+    {
+      "id": 7,
+      "price": "$80",
+      "review":5,
+      "totalReview":132,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Hospital Service Website",
+      "websiteImg": "https://i.ibb.co/Qk763TS/apollo.png",
+      "clientCodeLink": "https://github.com/mdhanif20/apollo-hospital",
+      "serverCodeLink": "https://github.com/mdhanif20/apollo-hospital-server",
+      "liveSide": "https://apollo-hospital-fe9a0.web.app/"
+    },
+    {
+      "id": 8,
+      "price": "$8",
+      "review":3.7,
+      "totalReview":30,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Theme Selling Website",
+      "websiteImg": "https://i.ibb.co/pWCC5p0/theme.png",
+      "clientCodeLink": "https://github.com/mdhanif20/theme-business-related-client-side",
+      "serverCodeLink": "https://github.com/mdhanif20/theme-busness-server-side",
+      "liveSide": "https://theme-selling-website.web.app/"
+    },
+    {
+      "id": 9,
+      "price": "$67",
+      "review":4.6,
+      "totalReview":10,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Hospital Service Website",
+      "websiteImg": "https://i.ibb.co/Qk763TS/apollo.png",
+      "clientCodeLink": "https://github.com/mdhanif20/apollo-hospital",
+      "serverCodeLink": "https://github.com/mdhanif20/apollo-hospital-server",
+      "liveSide": "https://apollo-hospital-fe9a0.web.app/"
+    },
+    {
+      "id": 10,
+      "price": "$100",
+      "review":4.0,
+      "totalReview":10,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Theme Selling Website",
+      "websiteImg": "https://i.ibb.co/pWCC5p0/theme.png",
+      "clientCodeLink": "https://github.com/mdhanif20/theme-business-related-client-side",
+      "serverCodeLink": "https://github.com/mdhanif20/theme-busness-server-side",
+      "liveSide": "https://theme-selling-website.web.app/"
+    },
+    {
+      "id": 11,
+      "price": "$45",
+      "review":4.5,
+      "totalReview":82,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Hospital Service Website",
+      "websiteImg": "https://i.ibb.co/Qk763TS/apollo.png",
+      "clientCodeLink": "https://github.com/mdhanif20/apollo-hospital",
+      "serverCodeLink": "https://github.com/mdhanif20/apollo-hospital-server",
+      "liveSide": "https://apollo-hospital-fe9a0.web.app/"
+    },
+    {
+      "id": 12,
+      "price": "$37",
+      "review":3.7,
+      "totalReview":45,
+      "details":"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis nobis, quas, nulla nostrum illum animi accusamus iusto ducimus fuga blanditiis. Distinctio veritatis illum quaerat saepe soluta et vel aperiam placeat! Iure fugiat perspiciatis ab molestias! Illo quis itaque voluptates possimus magni harum, corporis distinctio adipisci sapiente deserunt modi et necessitatibus praesentium eos omnis odit, iste vel temporibus ullam ipsa illum labore. Nam consequatur repellendus aliquam aperiam quos vitae, eaque reiciendis alias magnam incidunt illum quis debitis voluptas, sunt dolores laboriosam ut quidem maxime, laborum accusantium similique. Vitae dolor repellat, voluptas asperiores quam dolores officia architecto quaerat reiciendis nemo dolorem!",
+      "websiteName":"Theme Selling Website",
+      "websiteImg": "https://i.ibb.co/pWCC5p0/theme.png",
+      "clientCodeLink": "https://github.com/mdhanif20/theme-business-related-client-side",
+      "serverCodeLink": "https://github.com/mdhanif20/theme-busness-server-side",
+      "liveSide": "https://theme-selling-website.web.app/"
     }
-]
+  ]

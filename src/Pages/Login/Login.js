@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import GoogleIcon from '@mui/icons-material/Google';
 import useAuth from './../Shared/Firebase/useAuth';
 import Navbar from './../Shared/Navbar/Navbar';
@@ -36,9 +36,10 @@ const useStyle = makeStyles({
 
 const Login = () => {
     const classes = useStyle();
-    const {singnInUser,signInWithGoogle} = useAuth();
+    const {users,singnInUser,signInWithGoogle} = useAuth();
     const [user,setUser] = useState({});
-    
+    const navigate = useNavigate();
+
     const onChangeField = e =>{
         const field = e.target.name;
         const value= e.target.value;
@@ -48,9 +49,12 @@ const Login = () => {
     }
     const googleSignIn = e =>{
         signInWithGoogle()
+        navigate("/")   
     }
+    
     const loginAccount = e =>{
-    singnInUser(user.Email,user.Password)
+        singnInUser(user.Email,user.Password)
+        navigate("/")
         e.preventDefault()
     }
    

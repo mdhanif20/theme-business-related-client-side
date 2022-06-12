@@ -10,6 +10,8 @@ import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import DomainModal from './DomainModal';
+import Navbar from '../Shared/Navbar/Navbar';
+import FooterReall from '../Shared/FooterReall/FooterReall';
 
 const useStyle = makeStyles({
     domainArea:{
@@ -88,7 +90,16 @@ const Domain = () => {
     },[])
     
     return (
-        <Box id="domain" sx={{my:{xs:8,md:12},py:{xs:2,md:4},borderTop: "1px solid #f1f1f1",borderBottom: "1px solid #f1f1f1"}}>
+        <>
+       <Box>
+        <Navbar></Navbar>
+       </Box>
+       <h2 style={{textAlign: "center",
+                fontSize:" 2rem",
+                fontWeight: "400",
+                paddingTop: "60px"
+            }}>Buy Domain</h2>
+        <Box sx={{my:8,py:{xs:2,md:4},borderTop: "1px solid #f1f1f1",borderBottom: "1px solid #f1f1f1"}}>
             <Container>
                 <Grid sx={{display:"flex",alignItems:"center"}} container>
                     <Grid item sx={{textAlign:"start", my:{xs:2,md:5}}} xs={12} md={5}>
@@ -177,6 +188,10 @@ const Domain = () => {
                     </DomainModal>
                 </Box>
         </Box>
+        <Box>
+            <FooterReall></FooterReall>
+        </Box>
+        </>
     );
 };
 

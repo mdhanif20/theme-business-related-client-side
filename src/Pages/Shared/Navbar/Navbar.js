@@ -150,27 +150,30 @@ const Navbar = () => {
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: '#0F0C0B', display: 'block' }}>
-                      <Link style={{textDecoration:"none",color:"#fff"}} to="/appointment">
-                         <Typography textAlign="center">Appointment</Typography>
+                      <Link style={{textDecoration:"none",color:"#fff"}} to="/themes">
+                         <Typography textAlign="center">Themes</Typography>
                       </Link>
                   </Button>
               
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    style={{color: '#fff'}}
+                    sx={{ my: 2, display: 'block' }}>
+                      <Link style={{textDecoration:"none",color:"#fff"}} to="/domain">
+                      <Typography textAlign="center">Domain</Typography>
+                      </Link>
+                  </Button>
                 
                   <Button
                     onClick={handleCloseNavMenu}
-                    href="#hostings"
                     style={{color: '#fff'}}
                     sx={{ my: 2, display: 'block' }}>
-                         <Typography textAlign="center">Hosting</Typography>
+                      <Link style={{textDecoration:"none",color:"#fff"}} to="/hostings">
+                        <Typography textAlign="center">Hosting</Typography>
+                      </Link>
                   </Button>
 
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    href="#domain"
-                    style={{color: '#fff'}}
-                    sx={{ my: 2, display: 'block' }}>
-                         <Typography textAlign="center">Domain</Typography>
-                  </Button>
+                  
 
                   {
                         users?.email && <Button

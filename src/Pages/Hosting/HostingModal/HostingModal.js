@@ -4,14 +4,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
-import useAuth from './../../../Shared/Firebase/useAuth';
-import { convertLength } from '@mui/material/styles/cssUtils';
-
-
+import useAuth from './../../Shared/Firebase/useAuth';
 
 
 const style = {
@@ -46,40 +39,27 @@ const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
         hostingType: text3,
         price: "95.76"
     }
- 
-
-
-    
 
     const [buyHosting,setbuyHosting] = useState(defaultInfo); 
-
-    const {users} = useAuth();
-    const {displayName,email} = users;
-  
     const handleOnBlur = e =>{
-        const field = e.target.name;
-        const value = e.target.value;
-        const newInfo = {...buyHosting};
-        newInfo[field] = value
-        setbuyHosting(newInfo);
-    }
-
-   
-
-   
+      const field = e.target.name;
+      const value = e.target.value;
+      const newInfo = {...buyHosting};
+      newInfo[field] = value
+      setbuyHosting(newInfo);
+  }
 
     const bookingSubmit = e =>{
-        const appointment = {
+        const booking = {
             ...buyHosting,
             price: e.price
           }
-        console.log(appointment)
         fetch("http://localhost:5000/hosting",{
         method:"POST",
         headers:{
           "content-type":"application/json"
         },
-        body: JSON.stringify(appointment)
+        body: JSON.stringify(booking)
       })
       .then(res => res.json())
       .then(data=>{

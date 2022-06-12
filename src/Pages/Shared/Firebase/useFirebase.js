@@ -93,7 +93,7 @@ const useFirebase = () =>{
 
     //admin panel login
     useEffect(()=>{
-      const url = `https://peaceful-bayou-32308.herokuapp.com/users/${users.email}`;
+      const url = `http://localhost:5000/users/${users.email}`;
       fetch(url)
       .then(res=>res.json())
       .then(data => setAdmin(data.admin))

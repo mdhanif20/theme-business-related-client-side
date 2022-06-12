@@ -62,7 +62,7 @@ const useStyle = makeStyles({
 const HostingArea = () => {
     const classes = useStyle();
     return (
-        <Stack className={classes.getHosting} sx={{my:10}}> 
+        <Stack className={classes.getHosting} sx={{mb:10}}> 
             
             <Container>
             <Box sx={{background:"none"}}>
