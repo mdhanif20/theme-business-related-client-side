@@ -2,6 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Navbar from '../../Shared/Navbar/Navbar';
 import FooterReall from '../../Shared/FooterReall/FooterReall';
+import LeftSideBar from './../SideBar/LeftSideBar';
+
 
 const Deshboard = () => {
     return (
@@ -9,8 +11,9 @@ const Deshboard = () => {
             <Box>
                 <Navbar></Navbar>
             </Box>
-            
-            deshboard Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus doloremque exercitationem dignissimos ducimus sapiente deleniti aperiam corporis ex vero!
+            <Box sx={{margin:{xs:"0px",sm:"50px"},display:"flex",boxShadow: "0px 1px 3px #c4bdbd;"}}>
+                <LeftSideBar></LeftSideBar>
+            </Box>
             <Box>
                 <FooterReall></FooterReall>
             </Box>

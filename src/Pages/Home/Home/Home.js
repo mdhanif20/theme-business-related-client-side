@@ -20,7 +20,6 @@ const Home = () => {
             <Navbar></Navbar>
             <Slider></Slider>
             <Themes></Themes>
-            {/* <Hostings></Hostings>  */}
             <HostingResource></HostingResource>
             <Options></Options>
             <BuildWebVideo></BuildWebVideo>
@@ -29,10 +28,7 @@ const Home = () => {
             <SupportTeam></SupportTeam>
             <Packages></Packages>
             <GetHost></GetHost>
-            {/* <HostingArea></HostingArea>  */}
-            {/* <Footer></Footer> 
-             */}
-             <FooterReall></FooterReall>
+            <FooterReall></FooterReall>
         </div>
     );
 };

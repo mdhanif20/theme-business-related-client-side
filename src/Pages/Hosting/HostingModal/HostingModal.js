@@ -1,10 +1,9 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import useAuth from './../../Shared/Firebase/useAuth';
 
 
 const style = {
@@ -28,10 +27,7 @@ const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
         const price = (number[0] *3.99 * 12).toFixed(2); 
         setPrice(price);
     }
-    const totalPrice = e =>{
-        const value = e.target.value;
-        console.log(value)
-    }
+
     const defaultInfo = {
         hosting: type,
         speed: text1,
@@ -39,7 +35,6 @@ const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
         hostingType: text3,
         price: "95.76"
     }
-
     const [buyHosting,setbuyHosting] = useState(defaultInfo); 
     const handleOnBlur = e =>{
       const field = e.target.name;
@@ -48,7 +43,7 @@ const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
       newInfo[field] = value
       setbuyHosting(newInfo);
   }
-
+   
     const bookingSubmit = e =>{
         const booking = {
             ...buyHosting,
@@ -64,7 +59,7 @@ const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
       .then(res => res.json())
       .then(data=>{
         if(data.insertedId){
-            alert("Buy Successfully.")
+            alert("Buy Hosting Successfully.")
         //   setBookingSuccess(true) 
           setInterval(() => {
             // setBookingSuccess(false) 

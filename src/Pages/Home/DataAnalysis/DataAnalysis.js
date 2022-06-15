@@ -12,9 +12,7 @@ import logo3a from "../../../images/securityimg/icon_3a.png";
 import logo3b from "../../../images/securityimg/icon_3b.png";
 import logo4a from "../../../images/securityimg/icon_4a.png";
 import logo4b from "../../../images/securityimg/icon_4b.png";
-import logo5a from "../../../images/securityimg/icon_5a.png";
 import logo5b from "../../../images/securityimg/icon_5b.png";
-import logo6a from "../../../images/securityimg/icon_6a.png";
 import logo6b from "../../../images/securityimg/icon_6b.png";
 
 

@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { makeStyles } from '@mui/styles';
-import Option from './Option';
 import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 
@@ -74,14 +71,13 @@ const Options = () => {
     const vps = (a,b,e) =>{
         setValue(a);
         setGetid(b);
-        console.log(e.target.id) 
     }
     
     const classes = useStyle();
    
 
     return (
-        <Box sx={{my:20}}>
+        <Box sx={{my:10}}>
             <Container>
             <h1 className={classes.header}>
                 Select Your Best Option

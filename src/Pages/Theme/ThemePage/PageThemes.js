@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid';
 import PageTheme from './PageTheme';
 import Navbar from './../../Shared/Navbar/Navbar';
 import FooterReall from './../../Shared/FooterReall/FooterReall';
-import BuyThemeModal from './../BuyThemeModal';
 
 
 const PageThemes = () => {
@@ -12,7 +11,7 @@ const PageThemes = () => {
 
 
     useEffect(()=>{
-        fetch("./theme.JSON")
+        fetch("http://localhost:5000/themes")
         .then(res=>res.json())
         .then(data => setThemes(data))
     },[]);

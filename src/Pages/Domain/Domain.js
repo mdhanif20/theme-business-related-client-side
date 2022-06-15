@@ -69,7 +69,6 @@ const Domain = () => {
     };
 
     const onHandleBlur = e =>{
-        const domain = e.target.name;
         const suffix = e.target.value;
         setWrittenDomein(suffix)
      }

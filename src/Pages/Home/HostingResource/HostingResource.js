@@ -13,7 +13,7 @@ import serverImg from "../../../images/server.jpg";
 const HostingResource = () => {
     
     return (
-       <Box sx={{borderBottom:"1px solid #f1f1f1",mb:12}}>
+       <Box sx={{borderBottom:"1px solid #f1f1f1"}}>
             <Container sx={{pb:3}}>
             <Grid container>
                 <Grid item xs={12} md={7} sx={{textAlign:"start"}}>

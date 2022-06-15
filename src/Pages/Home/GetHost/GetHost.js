@@ -8,7 +8,6 @@ import Card from '@material-ui/core/Card';
 import bg1 from "../../../images/hostImg/img1.jpg";
 import icon1 from "../../../images/hostImg/icon1.png";
 import icon2 from "../../../images/hostImg/icon2.png";
-import icon3 from "../../../images/hostImg/icon3.png";
 import bg2 from "../../../images/hostImg/img2.jpg";
 import bg3 from "../../../images/hostImg/img3.jpg";
 import Button from '@mui/material/Button';

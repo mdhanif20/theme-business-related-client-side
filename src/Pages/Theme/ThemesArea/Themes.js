@@ -3,14 +3,14 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Theme from './Theme';
 import { Link } from 'react-router-dom';
-import useAuth from './../../Shared/Firebase/useAuth';
 
 
 const Themes = () => {
+
     const [themes,setThemes]= useState([]);
 
     useEffect(()=>{
-        fetch("./theme.JSON")
+        fetch("http://localhost:5000/themes")
         .then(res=>res.json())
         .then(data => setThemes(data))
     },[]);
@@ -31,9 +31,13 @@ const Themes = () => {
                     
                 </Grid>
             </Box>
-            <Link style={{textDecoration:"none"}} to="/themes">
-                 <h3 style={{textAlign:'center',fontSize:"2rem",fontWeight:"400",paddingTop:"60px",marginBottom:'0px'}}>Show All Theme</h3>
-            </Link>
+            
+                 <h3 style={{textAlign:'center',fontSize:"2rem",fontWeight:"400",padding:"60px 0px 100px 0px",marginBottom:'0px'}}>
+                 <Link style={{textDecoration:"none"}} to="/themes"> 
+                 Show All Theme
+                 </Link>
+                </h3>
+            
         </Box>
     );
 };

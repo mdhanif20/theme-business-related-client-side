@@ -12,6 +12,16 @@ import PageThemes from './Pages/Theme/ThemePage/PageThemes';
 import Deshboard from './Pages/Deshboard/Deshboard/Deshboard';
 import Domain from './Pages/Domain/Domain';
 import Hostings from './Pages/Hosting/Hostings';
+import MakeAdmin from './Pages/Deshboard/MakeAdmin/MakeAdmin';
+import AdminPrivateRoute from './Pages/Deshboard/AdminPrivateRoute/AdminPrivateRoute';
+import DeshBought from './Pages/Deshboard/Purchased/Bought/DeshBought';
+import DeshThemes from './Pages/Deshboard/Purchased/Theme/DeshThemes';
+import DeshDomains from './Pages/Deshboard/Purchased/Domain/DeshDomains';
+import DeshHostings from './Pages/Deshboard/Purchased/Hosting/DeshHostings';
+import ThemesEdit from './Pages/Deshboard/AdminPanel/InformationEdit/ThemeEdit/ThemesEdit';
+import DomainEdit from './Pages/Deshboard/AdminPanel/InformationEdit/DomainEdit/DomainEdit';
+import HostingEdit from './Pages/Deshboard/AdminPanel/InformationEdit/HostingEdit/HostingEdit';
+
 
 
 
@@ -26,8 +36,18 @@ function App() {
                 <Route path="/themes" element={<PageThemes/>} />
                 <Route path="/domain" element={<Domain/>} />
                 <Route path="/hostings" element={<Hostings/>} />
-                <Route path="/deshboard" element={<Deshboard/>} />
                 <Route path="/reagister" element={<Reagister/>} />
+                <Route path="/deshboard/*" element={<Deshboard/>}>
+                  <Route path="*" element={<DeshThemes/>} /> 
+                  <Route path="deshDomain" element={<DeshDomains/>} /> 
+                  <Route path="deshHosting" element={<DeshHostings/>} /> 
+                      <Route path="*" element={<AdminPrivateRoute/>}> 
+                          <Route path="makeadmin" element={<MakeAdmin/>}/>
+                          <Route path="editTheme" element={<ThemesEdit/>}/>
+                          <Route path="editDomain" element={<DomainEdit/>}/>
+                          <Route path="editHosting" element={<HostingEdit/>}/>
+                      </Route>
+                  </Route>
               </Routes>
           </BrowserRouter>
       </AuthProvider>

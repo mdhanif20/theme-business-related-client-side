@@ -10,7 +10,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import GoogleIcon from '@mui/icons-material/Google';
 import useAuth from './../Shared/Firebase/useAuth';
 import Navbar from './../Shared/Navbar/Navbar';
-import Footer from './../Home/Footer/Footer';
 import img from "../../images/smallScreenbg.png";
 import FooterReall from './../Shared/FooterReall/FooterReall';
 
@@ -36,7 +35,7 @@ const useStyle = makeStyles({
 
 const Login = () => {
     const classes = useStyle();
-    const {users,singnInUser,signInWithGoogle} = useAuth();
+    const {singnInUser,signInWithGoogle} = useAuth();
     const [user,setUser] = useState({});
     const navigate = useNavigate();
 

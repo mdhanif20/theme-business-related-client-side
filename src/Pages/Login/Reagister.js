@@ -6,15 +6,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 import CircularProgress from '@mui/material/CircularProgress';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import useAuth from './../Shared/Firebase/useAuth';
 import Navbar from './../Shared/Navbar/Navbar';
-import Footer from './../Home/Footer/Footer';
 import img from "../../images/smallScreenbg.png";
+import FooterReall from './../Shared/FooterReall/FooterReall';
 
 
 const useStyle = makeStyles({
@@ -37,7 +37,8 @@ const Reagister = () => {
     const {users,authError,registerUser,isLoading} = useAuth();
     const classes = useStyle();
     const [user,setUser] = useState({});
-  
+    const navigate = useNavigate();
+
     const onChangeBlur = e =>{
         const field = e.target.name;
         const value= e.target.value;
@@ -52,7 +53,7 @@ const Reagister = () => {
         }
         else{
             registerUser(user.email,user.password,user.name)
- 
+            navigate("/")
         }
         
         e.preventDefault()
@@ -132,7 +133,7 @@ const Reagister = () => {
         </Box>
         </Container>
         <Box sx={{boxShadow: 1,color:"rgba(0, 0, 0, 0.87)"}}>
-            <Footer></Footer>
+            <FooterReall></FooterReall>
         </Box>
        </Box>
     );

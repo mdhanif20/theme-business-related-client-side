@@ -9,12 +9,10 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import BuyThemeModal from './../BuyThemeModal';
-import useAuth from './../../Shared/Firebase/useAuth';
 
 
 const Theme = ({data}) => {
     const [learn,setLearn] = useState(false);
-    const {users} = useAuth();
     const [openBooking, setOpenBooking] = React.useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
     const handleBookingClose = () => setOpenBooking(false);

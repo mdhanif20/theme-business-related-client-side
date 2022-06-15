@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import HostingModal from '../HostingModal/HostingModal';
 
 const Hosting = ({hosting}) => {
-    const {type,text1,text2,text3,img,buttonUrl}= hosting;
+    const {type,text1,text2,text3,img}= hosting;
     const [openBooking, setOpenBooking] = React.useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
     const handleBookingClose = () => setOpenBooking(false);
