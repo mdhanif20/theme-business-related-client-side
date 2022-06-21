@@ -167,12 +167,12 @@ const Domain = () => {
                        gridTemplateColumns: "repeat(3, 1fr)",
                        justifyContent:"space-between",mt:3}}>
                            {
-                               suffixs.map(suffix=><Box key={suffix.id}>
+                               suffixs.slice(0,6).map(suffix=><Box key={suffix.id}>
                                 <Typography variant="h6" sx={{mb:0}} gutterBottom component="div">
                                     {suffix.suffix}
                                 </Typography>
                                 <Typography sx={{opacity:".7"}} variant="body2" gutterBottom>
-                                    ${suffix.payment}/year
+                                    ${suffix.price}/year
                                 </Typography>
                                </Box>)
                            }

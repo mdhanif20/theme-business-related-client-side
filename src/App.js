@@ -17,9 +17,9 @@ import AdminPrivateRoute from './Pages/Deshboard/AdminPrivateRoute/AdminPrivateR
 import DeshThemes from './Pages/Deshboard/Purchased/Theme/DeshThemes';
 import DeshDomains from './Pages/Deshboard/Purchased/Domain/DeshDomains';
 import DeshHostings from './Pages/Deshboard/Purchased/Hosting/DeshHostings';
-import DomainEdit from './Pages/Deshboard/AdminPanel/InformationEdit/DomainEdit/DomainEdit';
 import HostingEdit from './Pages/Deshboard/AdminPanel/InformationEdit/HostingEdit/HostingEdit';
 import ThemesAdmin from './Pages/Deshboard/AdminPanel/InformationEdit/ThemeEdit/ThemesAdmin';
+import DomainAdmin from './Pages/Deshboard/AdminPanel/InformationEdit/DomainEdit/DomainAdmin';
 
 
 
@@ -43,7 +43,7 @@ function App() {
                       <Route path="*" element={<AdminPrivateRoute/>}> 
                           <Route path="makeadmin" element={<MakeAdmin/>}/>
                           <Route path="editTheme" element={<ThemesAdmin/>}/>
-                          <Route path="editDomain" element={<DomainEdit/>}/>
+                          <Route path="editDomain" element={<DomainAdmin/>}/>
                           <Route path="editHosting" element={<HostingEdit/>}/>
                       </Route>
                   </Route>

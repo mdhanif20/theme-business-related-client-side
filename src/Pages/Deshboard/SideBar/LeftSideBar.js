@@ -36,7 +36,8 @@ const useStyle = makeStyles({
     },
     text:{
         fontWeight:800,
-        fontSize:"1rem"
+        fontSize:"1rem",
+        opacity:1
     },
     linkDesign:{
         textDecoration:"none",
