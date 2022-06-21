@@ -41,7 +41,7 @@ const useStyle = makeStyles({
 
 const Domain = () => {
     const classes = useStyle();
-    const [suffix,setSuffix] = useState([]);
+    const [suffixs,setSuffixs] = useState([]);
     const [Price,setPrice] = useState({});
     const [suffixValue, setSuffixValue] = React.useState('');
     const [writtenDomein,setWrittenDomein] = useState("");
@@ -52,7 +52,7 @@ const Domain = () => {
 
     const buyDomain = value =>{
         const buyerSuffix= value.suffixValue;
-        const data = suffix.filter(suffixs =>suffixs.suffix === buyerSuffix);
+        const data = suffixs.filter(suffixs =>suffixs.suffix === buyerSuffix);
         setPrice(data[0].price);
         if(buyerSuffix && writtenDomein !== ""){
             handleBookingOpen()
@@ -83,9 +83,9 @@ const Domain = () => {
     };
 
     useEffect(()=>{
-        fetch("./offer.JSON")
+        fetch("http://localhost:5000/domain")
         .then(res => res.json())
-        .then(data => setSuffix(data))
+        .then(data => setSuffixs(data))
     },[])
     
     return (
@@ -128,8 +128,12 @@ const Domain = () => {
                             label="suffix"
                             onChange={handleChange}
                         >
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".com"}>.com</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".net"}>.net</MenuItem>
+                            {
+                               suffixs.map(suffix =><MenuItem key={suffix._id} style={{display:"block",paddingLeft:"5px"}} value={".com"}>{suffix.suffix
+                               }</MenuItem>) 
+                            }
+                            
+                            {/* <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".net"}>.net</MenuItem>
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".org"}>.org</MenuItem>
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".info"}>.info</MenuItem>
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".US"}>.US</MenuItem>
@@ -142,7 +146,7 @@ const Domain = () => {
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".cc"}>.cc</MenuItem>
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".nu"}>.nu</MenuItem>
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".br"}>.br</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={'.bt'}>.bt</MenuItem>
+                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={'.bt'}>.bt</MenuItem> */}
                         </Select>
 
                         </FormControl>
@@ -163,12 +167,12 @@ const Domain = () => {
                        gridTemplateColumns: "repeat(3, 1fr)",
                        justifyContent:"space-between",mt:3}}>
                            {
-                               suffix.map(suffixs=><Box key={suffixs.id}>
+                               suffixs.map(suffix=><Box key={suffix.id}>
                                 <Typography variant="h6" sx={{mb:0}} gutterBottom component="div">
-                                    {suffixs.suffix}
+                                    {suffix.suffix}
                                 </Typography>
                                 <Typography sx={{opacity:".7"}} variant="body2" gutterBottom>
-                                    {suffixs.payment}
+                                    ${suffix.payment}/year
                                 </Typography>
                                </Box>)
                            }

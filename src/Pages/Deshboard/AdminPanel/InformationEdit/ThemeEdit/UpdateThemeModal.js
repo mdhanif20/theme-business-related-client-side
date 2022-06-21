@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect,useState} from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -6,49 +6,46 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 
-const AddThemeModal = ({openBooking,handleBookingClose}) => { 
+const UpdateThemeModal = ({openBooking,handleBookingClose,theme}) => { 
    
     const themeData = {
-      price:"",
-      review:"",
-      totalReview:"",
-      details:"",
-      websiteName:"",
-      websiteImg:"",
-      clientCodeLink:"",
-      serverCodeLink:"",
-      liveSide:""
+      price:`${theme.price}`,
+      review:`${theme.review}`,
+      totalReview:`${theme.totalReview}`,
+      details:`${theme.details}`,
+      websiteName:`${theme.websiteName}`,
+      websiteImg:`${theme.websiteImg}`,
+      clientCodeLink:`${theme.clientCodeLink}`,
+      serverCodeLink:`${theme.serverCodeLink}`,
+      liveSide:`${theme.liveSide}`
     }
-    const [theme,setTheme] = useState(themeData);
-
+    const [updateTheme,setUpdateTheme] = useState(themeData);
 
     const OnBlurhandle = e =>{
       const field = e.target.name;
       const value = e.target.value;
-      const newInfo = {...theme};
+      const newInfo = {...updateTheme};
       newInfo[field] = value
-      setTheme(newInfo);
+      setUpdateTheme(newInfo);
   }
   
    
-    const addTheme = e =>{
-        fetch("http://localhost:5000/deshboard/addTheme",{
-        method:"POST",
-        headers:{
-          "content-type":"application/json"
-        },
-        body: JSON.stringify(theme)
-      })
-      .then(res => res.json())
-      .then(data=>{
-        if(data.insertedId){
-            alert("Add Theme Successfully")
-        //   setBookingSuccess(true) 
-          setInterval(() => {
-            // setBookingSuccess(false) 
-          }, 18000);
-        }
-      }) 
+    const updateThemeData = id =>{
+            const url = `http://localhost:5000/theme/${id}`;
+            fetch(url,{
+                method:"PUT",
+                headers:{
+                    'content-type':"application/json"
+                },
+                body: JSON.stringify(updateTheme)
+            })
+            .then(res => res.json())
+            .then(data =>{
+                if(data.modifiedCount>0){
+                    alert("Updated Successfully")
+                    // setUser({}) 
+                }
+            })
     }
     return (
         <Modal
@@ -70,7 +67,7 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
              borderRadius:"10px"
           }}>
             <Typography sx={{color:"#26C9C4",mb:2}} id="modal-modal-title" variant="h6" component="h2">
-            Add New Theme
+            Update Your Theme
             </Typography>
               
               <form>
@@ -78,11 +75,11 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
               <Box sx={{display:"flex"}}>
                     <TextField
                     sx={{width:"100%",my:1,mr:1}}
-                    label="Website Name"
+                    label="websiteName"
                     onBlur={OnBlurhandle}
                     name="websiteName"
                     id="outlined-size-small"
-                    defaultValue="Website Name" 
+                    defaultValue={theme.websiteName}
                     size="small"
                     />
                     <TextField
@@ -91,7 +88,7 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                     onBlur={OnBlurhandle}
                     name="websiteImg"
                     id="outlined-size-small"
-                    defaultValue="Image Url" 
+                    defaultValue={theme.websiteImg} 
                     size="small"
                     />
               </Box>
@@ -103,7 +100,7 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                 onBlur={OnBlurhandle}
                 name="liveSide"
                 id="outlined-size-small"
-                defaultValue="Live Side Url" 
+                defaultValue={theme.liveSide} 
                 size="small"
                 />
                 <TextField
@@ -112,7 +109,7 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                 onBlur={OnBlurhandle}
                 name="clientCodeLink"
                 id="outlined-size-small"
-                defaultValue="Code link Url" 
+                defaultValue={theme.clientCodeLink}
                 size="small"
                 />
               </Box>
@@ -124,7 +121,7 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                   onBlur={OnBlurhandle}
                   name="serverCodeLink"
                   id="outlined-size-small"
-                  defaultValue="Code link Url" 
+                  defaultValue={theme.serverCodeLink} 
                   size="small"
                   />
                   <TextField
@@ -133,7 +130,7 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                     onBlur={OnBlurhandle}
                     name="price"
                     id="outlined-size-small"
-                    defaultValue="$"
+                    defaultValue={theme.price}
                     size="small"
                     />
                  
@@ -145,8 +142,8 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                 name="details"
                 label="Website Details"
                 multiline
-                rows={3}
-                defaultValue="Description"
+                rows={2}
+                defaultValue={theme.details}
               />
              <Box sx={{display:"flex"}}>
                 <TextField
@@ -155,7 +152,7 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                     onBlur={OnBlurhandle}
                     name="review"
                     id="outlined-size-small"
-                    defaultValue="rating"
+                    defaultValue={theme.review}
                     size="small"
                     />
                 <TextField
@@ -164,11 +161,11 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                     onBlur={OnBlurhandle}
                     name="totalReview"
                     id="outlined-size-small"
-                    defaultValue="review"
+                    defaultValue={theme.totalReview}
                     size="small"
                     />
                </Box>
-                <Button onClick={()=> addTheme()}
+                <Button onClick={()=> updateThemeData(theme._id)}
                 style={
                     {
                         background:"#8F40FB",
@@ -181,11 +178,11 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
                         color:"#fff",
                         margin:"0px 0px 5px 0px"
                         }
-                    } variant="contained">Add Theme</Button>
+                    } variant="contained">Update Theme</Button>
               </form>
           </Box>
       </Modal>
     );
 };
 
-export default AddThemeModal;
+export default UpdateThemeModal;

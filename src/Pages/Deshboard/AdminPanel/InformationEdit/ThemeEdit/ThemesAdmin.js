@@ -11,30 +11,51 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
-import UpdateTheme from './UpdateTheme';
-import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import AddThemeModal from './AddThemeModal';
+import UpdateThemeModal from './UpdateThemeModal';
 
 
-
-const ThemeEdit = () => {
+const ThemesAdmin = () => {
     const [themes,setThemes] = useState([]);
     const [openBooking, setOpenBooking] = React.useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
     const handleBookingClose = () => setOpenBooking(false);
+    const [openUpdate, setOpenUpdate] = React.useState(false);
+    const handleUpdateOpen = () => setOpenUpdate(true);
+    const handleUpdateClose = () => setOpenUpdate(false);
 
-    let value = 1;
-        const serialNumber = (n)=>{
-            value = value+1;
-        }
+    let value = 0;
+    const serialNumber = (n)=>{
+        value = value+1;
+    }
 
     //load theme
     useEffect(()=>{
         fetch("http://localhost:5000/themes")
         .then(res=> res.json())
         .then(data => setThemes(data))
-    },[])
+    },[openBooking,openUpdate])
+
+
+    // for delete 
+  const deleteTheme = id =>{
+        const proceed = window.confirm("Are you sure, you want to delete?")
+        if(proceed){
+            const url = `http://localhost:5000/theme/${id}`;
+            fetch(url,{
+                method:"DELETE"
+            })
+            .then(res => res.json())
+            .then(data =>{
+                if(data.deletedCount>0){
+                    alert("Delete Successfully")
+                    const remainingUser = themes.filter(theme=> theme._id !== id) 
+                    setThemes(remainingUser) 
+                }
+            }) 
+        }
+    } 
 
     return (
         <> 
@@ -43,7 +64,7 @@ const ThemeEdit = () => {
             <Link style={{textDecoration:'none',color:"#fff"}} to="/deshboard/editTheme"> <Button style={{color:"#fff",fontSize:"18px"}}>Theme</Button> </Link>
             <Link style={{textDecoration:'none',color:"#fff"}} to="/deshboard/editDomain"> <Button style={{color:"#fff",fontSize:"18px"}}>Domain</Button> </Link>
             <Link style={{textDecoration:'none',color:"#fff"}} to="/deshboard/editHosting"> <Button style={{color:"#fff",fontSize:"18px"}}>Hosting</Button> </Link>
-        </Box>
+        </Box> 
             <Box sx={{opacity:"0",mb:{xs:-15,sm:-12,md:-3}}}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque repudiandae totam error,unde possimus, commodi officia, dolorum accusamus vitae quia dicta. Minus totam nobis ratione.repudiandae totam error, unde possimus, commodi officia, dolorum accusamus vitae quia dicta. Minus totam nobis ratione.
             </Box> 
@@ -66,7 +87,7 @@ const ThemeEdit = () => {
                 variant="contained"> <AddIcon/> Add New Theme</Button>
             </p>
             
-            <Card> 
+           <Card> 
                 <Scrollbars style={{ width:"100%", height:"70vh" }}>
                 <TableContainer style={{overflowX:"visible"}} component={Paper}>
                     <Table sx={{ width: "100%" }} aria-label="simple table">
@@ -78,34 +99,65 @@ const ThemeEdit = () => {
                                 <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Rating</TableCell>
                                 <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Total Review</TableCell>
                                 <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Update</TableCell>
+                                <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Delete</TableCell>
                             </TableRow>
                         </TableHead>
                         
                         <TableBody>
-                        {
-                            themes.map(theme=><UpdateTheme 
-                            key={theme._id}
-                            theme={theme}
-                            value={value}
-                            >
-                            {
-                                theme._id && serialNumber()
-                            }
-                            </UpdateTheme>)
-                        }
+
+                       {/* {
+                            themes.map(theme=><ThemeAdmin
+                                key={theme._id}
+                                theme={theme}
+                                value={value}
+                                >
+                                {
+                                    theme._id && serialNumber()
+                                }
+                                </ThemeAdmin> )
+                        } */}  
+                       {
+                            themes.map(theme=> <TableRow
+                                style={{color:"red"}}
+                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                key={theme._id}
+                                >
+                                    {
+                                        theme._id && serialNumber()
+                                    }
+                                <TableCell sx={{padding:"10px"}} align="left">{value}</TableCell>
+                                <TableCell sx={{padding:"10px"}} align="left">{theme.websiteName}</TableCell>
+                                <TableCell sx={{padding:"10px"}} align="left">{theme.price}</TableCell>
+                                <TableCell sx={{padding:"10px"}} align="left">{theme.review}</TableCell>
+                                <TableCell sx={{padding:"10px"}} align="left">{theme.totalReview}</TableCell>
+                                <TableCell onClick={handleUpdateOpen} sx={{padding:"10px",cursor:"pointer",color:'#357EDD'}} align="left">Update</TableCell>
+                                <TableCell onClick={()=>deleteTheme(theme._id)} sx={{padding:"10px",cursor:"pointer",color:'#ff7373'}} align="left">Delete</TableCell>
+                                <Box>
+                                    <UpdateThemeModal
+                                        openBooking={openUpdate}
+                                        handleBookingClose={handleUpdateClose}
+                                        theme={theme} 
+                                        >
+                                    </UpdateThemeModal>  
+                                </Box>
+                                </TableRow>  )
+                        }  
+                         
                         </TableBody>
                     </Table>
                 </TableContainer>
                 </Scrollbars>
-            </Card>
+            </Card> 
             <AddThemeModal
             openBooking={openBooking}
             handleBookingClose={handleBookingClose}
             >
-        </AddThemeModal> 
+            </AddThemeModal> 
+            
         </Box>
+        
         </>
     );
 };
 
-export default ThemeEdit;
+export default ThemesAdmin;
