@@ -12,6 +12,8 @@ import ModalUnstyled from '@mui/base/ModalUnstyled';
 
 const StyledModal = styled(ModalUnstyled)`
   position: fixed;
+  height: "60vh";
+  width:"60vh",
   z-index: 1300;
   right: 0;
   bottom: 0;
@@ -34,15 +36,15 @@ const Backdrop = styled('div')`
 `;
 
 const style = {
-  width: "80%",
+  width: "100%",
   bgcolor: 'background.paper',
-  height:"70vh"
+  height:"100%"
 };
 
 const smallStyle = {
-  width: "90%",
+  width: "80%",
   bgcolor: 'background.paper',
-  height:"60vh"
+  height:"80%"
 };
 
 
@@ -80,14 +82,16 @@ const useStyle = makeStyles({
         border: "0",
         borderRadius:" 50%",
         backgroundColor: "#99FFFF",  
-        marginTop: "-45vh"
+        marginTop: "-45vh",
+        cursor:"pointer"
     },
     smallvideoPlayerBtn:{
         padding: "1rem",
         border: "0",
         borderRadius:" 50%",
         backgroundColor: "#99FFFF",  
-        marginTop: "-15vh"
+        marginTop: "-15vh",
+        cursor:"pointer"
     },
     buttonBox:{
         display: "flex",
@@ -128,7 +132,7 @@ const BuildWebVideo = () => {
                             BackdropComponent={Backdrop}
                         >
                             <Box sx={style}>
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/C2zWWX0NwZc?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kKn6H7A0Uvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </Box>
                         </StyledModal>
                     </div>
@@ -160,7 +164,7 @@ const BuildWebVideo = () => {
                         BackdropComponent={Backdrop}
                     >
                         <Box sx={smallStyle}>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/C2zWWX0NwZc?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kKn6H7A0Uvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </Box>
                     </StyledModal>
                 </div>

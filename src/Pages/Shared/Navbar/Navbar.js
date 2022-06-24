@@ -61,14 +61,6 @@ const Navbar = () => {
               <img src={logo} width="50px" height="50px" alt="" />
               </Typography>
 
-
-
-
-
-
-
-
-
               <Box sx={{ flexGrow: 1,mx:2, display: { xs: 'flex', sm:"flex" , md: 'none' },justifyContent: 'flex-end'  }}>
                 <IconButton
                   size="large"

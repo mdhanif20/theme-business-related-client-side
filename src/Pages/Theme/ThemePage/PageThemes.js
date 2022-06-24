@@ -8,8 +8,6 @@ import FooterReall from './../../Shared/FooterReall/FooterReall';
 
 const PageThemes = () => {
     const [themes,setThemes]= useState([]);
-
-
     useEffect(()=>{
         fetch("http://localhost:5000/themes")
         .then(res=>res.json())

@@ -32,16 +32,6 @@ const HostingModal = ({openBooking,handleBookingClose,hosting,Price}) => {
         setCalculatedPrice(price);
     }
   
-
-   
-   /*  const [buyHosting,setbuyHosting] = useState(defaultInfo); 
-    const handleOnBlur = e =>{
-      const field = e.target.name;
-      const value = e.target.value;
-      const newInfo = {...buyHosting};
-      newInfo[field] = value
-      setbuyHosting(newInfo);
-  } */
    
     const bookingSubmit = e =>{
       const defaultInfo = {

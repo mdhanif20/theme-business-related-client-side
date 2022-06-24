@@ -21,7 +21,7 @@ const style = {
 const BuyThemeModal = ({openBooking,handleBookingClose,data}) => {
 
     const {users} = useAuth();
-    const {id,websiteName,price} = data;
+    const {websiteName,price} = data;
 
     const buyTheme = e =>{
       const details={

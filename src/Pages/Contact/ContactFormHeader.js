@@ -6,8 +6,6 @@ import ContactForm from './ContactForm';
 
 const useStyle = makeStyles({
     bgImage:{
-        // background:`url(${bg})`,
-        // backgroundColor: "rgba(61, 61, 61, .8)",
         backgroundBlendMode: "darken, luminosity",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

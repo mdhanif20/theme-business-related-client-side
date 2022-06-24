@@ -1,10 +1,8 @@
 import React, { useRef } from 'react';
-import Container from '@mui/material/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
 import emailjs from '@emailjs/browser';
 import Button from '@mui/material/Button';
-import useAuth from './../Shared/Firebase/useAuth';
 import SendIcon from '@mui/icons-material/Send';
 
 const useStyle = makeStyles({
@@ -37,7 +35,6 @@ const useStyle = makeStyles({
         fontWeight:" 500",
     },
     button:{
-        // backgroundImage: "linear-gradient(to right, #19D3AE , #0FEFCB)",
         backgroundColor: "#b540fb",
         fontSize:"1.3rem",
         "&:hover":{
@@ -48,7 +45,6 @@ const useStyle = makeStyles({
 const ContactForm = () => {
     const classes = useStyle();
     const form = useRef();
-    const {users} = useAuth();
     const sendEmail = e =>{
         e.preventDefault()
         emailjs.sendForm('service_64fo5li', 'template_97mzt4i', e.target, 'sEIjvaT255FOB530n')
@@ -59,9 +55,6 @@ const ContactForm = () => {
     }
     return (
         <Box> 
-
-        {/* <Container sx={{textAlign:"center"}}> */}
-            {/* <Box sx={{width:{xs:"94%",md:"60%"},margin:"auto"}}>  */}
                 <form ref={form} onSubmit={sendEmail}>
                     <input type="email" name="user_email" className={classes.input} placeholder="Enter your email" /> <br />
                     <input type="text" name="user_name" className={classes.input} placeholder='Subject' /> <br />
@@ -71,8 +64,6 @@ const ContactForm = () => {
                     <input className={classes.submitButton} type="submit" value="Send"/>
                     </Button>
                 </form>
-            {/* </Box> */}
-        {/* </Container>  */}
         </Box>
     );
 };

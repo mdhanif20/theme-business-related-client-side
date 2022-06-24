@@ -1,8 +1,5 @@
 import { Logout, Settings} from '@mui/icons-material';
 import AppsIcon from '@mui/icons-material/Apps';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday'; 
-import PeopleIcon from '@mui/icons-material/People';
-import AssignmentIcon from '@mui/icons-material/Assignment';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import { Container } from '@mui/material';
 import Typography from '@mui/material/Typography';

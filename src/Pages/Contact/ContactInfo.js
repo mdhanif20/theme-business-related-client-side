@@ -9,9 +9,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ContactFormHeader from './ContactFormHeader';
 
-/* rgba(59, 197, 197, 1) 27%,
-rgba(59, 197, 197, 1) 50%, */
-
 const useStyle = makeStyles({
     contactArea:{
         backgroundColor:"#9940fb9e"

@@ -109,18 +109,7 @@ const ThemesAdmin = () => {
                         </TableHead>
                         
                         <TableBody>
-
-                       {/* {
-                            themes.map(theme=><ThemeAdmin
-                                key={theme._id}
-                                theme={theme}
-                                value={value}
-                                >
-                                {
-                                    theme._id && serialNumber()
-                                }
-                                </ThemeAdmin> )
-                        } */}  
+  
                        {
                             themes.map(theme=> <TableRow
                                 style={{color:"red"}}

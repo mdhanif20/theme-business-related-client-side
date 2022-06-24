@@ -4,13 +4,13 @@ import BuildWebVideo from '../BuildWebVideo/BuildWebVideo';
 import Comment from '../ClientComment/Comment';
 import DataAnalysis from '../DataAnalysis/DataAnalysis';
 import HostingResource from '../HostingResource/HostingResource';
-import Options from '../OptionSelection/Options';
 import Packages from '../Package/Packages';
 import Slider from '../Slider/Slider';
 import SupportTeam from '../SupportTeam/SupportTeam';
 import GetHost from '../GetHost/GetHost';
 import FooterReall from '../../Shared/FooterReall/FooterReall';
 import Themes from './../../Theme/ThemesArea/Themes';
+import Storage from '../StorageArea/Storage';
 
 
 
@@ -21,7 +21,7 @@ const Home = () => {
             <Slider></Slider>
             <Themes></Themes>
             <HostingResource></HostingResource>
-            <Options></Options>
+            <Storage></Storage>
             <BuildWebVideo></BuildWebVideo>
             <Comment></Comment>
             <DataAnalysis></DataAnalysis>

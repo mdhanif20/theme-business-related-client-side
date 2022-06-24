@@ -71,7 +71,7 @@ return (
       >
           <Box sx={style}>
             <Typography sx={{color:"#26C9C4",mb:2}} id="modal-modal-title" variant="h6" component="h2">
-              {/* {type}  */}
+              Buy Domain
             </Typography>
               
               <form>

@@ -7,6 +7,8 @@ import { makeStyles } from '@mui/styles';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
+import useAuth from '../../Shared/Firebase/useAuth';
+import StorageBuyModal from './StorageBuyModal';
 
 
 
@@ -27,7 +29,7 @@ const useStyle = makeStyles({
         border: "0px"
     },
     storage:{
-        width: "70px",
+        width: "80px",
         border: "0px",
         fontSize: "18px",
         fontWeight: "500",
@@ -48,23 +50,59 @@ const useStyle = makeStyles({
         display: "flex",
         justifyContent: "space-between",
         marginBottom:"40px"
+    },
+    storageform:{
+        display:"flex",
+        justifyContent: "space-between",
+        marginTop:"20px"
+    },
+    input:{
+        border: "none",
+        width: "70px",
+        fontSize: "1.1rem",
+        background: "#fff",
+        color: "black"
+    },
+    buyButton:{
+        
     }
 })
 
-const Options = () => {
+const Storage = () => {
+    const {users} = useAuth();
     const [value,setValue] = useState(false);
     const [hostings,setHostings] = useState([]);
+    console.log(hostings)
     const [getid,setGetid]=useState(1);
     const [selected,setSelected] = useState(1);
-  
+    const [openBooking, setOpenBooking] = useState(false);
+    const [buyerData,setBuyerData]= useState({});
+    const handleBookingOpen = () => setOpenBooking(true);
+    const handleBookingClose = () => setOpenBooking(false);
+    
+    const buyStorage = selected =>{
+        const info = {
+            email:users.email,
+            storage:selected.storage,
+            ram:selected.ram,
+            bandwidth:selected.bandwidth,
+            price:selected.price,
+            core:selected.core,
+            id:selected.id
+        }
+        setBuyerData(info)
+        handleBookingOpen()
+
+    }    
+
       useEffect(()=>{
-            fetch("./selectOption.JSON")
+            fetch("http://localhost:5000/storage")
             .then(res => res.json())
             .then(data => setHostings(data))
         },[getid])
     
         useEffect(()=>{
-            const select = hostings.find(host=> host.id===parseFloat(getid))
+            const select = hostings.find(host=> parseInt(host.id)===parseFloat(getid))
             setSelected(select)
         },[hostings])
 
@@ -138,13 +176,14 @@ const Options = () => {
                     
                   </Box>
                 <Grid sx={{mt:5}}>
-                    <Grid md={8}> 
-                    <Box sx={{justifyContent: "space-between",mx:5,opacity:".4",display:{xs:"none",md:"flex"}}}>
+                    <Grid md={12}> 
+                    <Box sx={{justifyContent: "space-between",ml:5,mr:25,opacity:".4",display:{xs:"none",md:"flex"}}}>
                         <span>CORE</span>
                         <span>STORAGE</span>
                         <span>RAM</span>
                         <span>BANDWIDTH</span>
                         <span>PRICE</span>
+                        <span>Buy Now</span>
                     </Box>
                     </Grid>
                         <Box sx={{my:2,
@@ -153,27 +192,38 @@ const Options = () => {
                         borderRadius: "50px",
                         display:{xs:"none",md:"block"}}}>
                         <Grid container>
-                            <Grid md={8}>
+                            <Grid md={12}>
                               
-                            <Box sx={{display:"flex",justifyContent: "space-between",mt:1}}>
-                            <span style={{marginLeft:""}}>
-                              {selected?.id}
-                            </span>
-                            <span  style={{marginLeft:"20px"}}>
-                              {selected?.storage}
-                            </span>
-                            <span style={{marginLeft:"15px"}}>
-                              {selected?.ram}
-                            </span>
-                            <span style={{marginLeft:"5px"}}>
-                              {selected?.bandwidth}
-                            </span>
-                            <span style={{paddingLeft:"5px"}}>
-                              {selected?.price}
-                            </span>
+                            <Box sx={{}}>
+                            <form className={classes.storageform} action="">
+                                <input disabled className={classes.input} type="text" value={selected?.id} />
+                                <input disabled className={classes.input} type="text" value={selected?.storage} />
+                                <input disabled className={classes.input} type="text" value={selected?.ram} />
+                                <input disabled className={classes.input} type="text" value={selected?.bandwidth} />
+                                <input style={{width:"90px"}} disabled className={classes.input} type="text" value={selected?.price} />
+                                <Button 
+                                onClick = {()=>buyStorage(selected)}
+                                style={{
+                                    background: "linear-gradient(to right,#544CF9,#8F5FF9)",
+                                    fontSize: "18px",
+                                    padding: "7px 27px",
+                                    borderRadius: "30px",
+                                    boxShadow: 0
+                                }}
+                                variant="contained">BUY NOW</Button>
+                            <Box>
+                            <StorageBuyModal
+                            openBooking={openBooking}
+                            handleBookingClose={handleBookingClose}
+                            data = {buyerData}
+                            >
+                            </StorageBuyModal> 
+                            </Box>
+                            </form>
+                            
                             </Box>
                             </Grid>
-                            <Grid sx={{textAlign: "end"}} md={4}>
+                            {/* <Grid sx={{textAlign: "end"}} md={4}>
                             <Button 
                             style={
                                 {
@@ -186,7 +236,8 @@ const Options = () => {
                                     }
                             }
                             variant="contained">BUY NOW</Button>
-                            </Grid>
+                             
+                             </Grid> */}
                             </Grid>
                         </Box>
                     
@@ -228,4 +279,4 @@ const Options = () => {
     );
 };
 
-export default Options;
+export default Storage;

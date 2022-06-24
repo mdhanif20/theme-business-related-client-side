@@ -6,6 +6,7 @@ import { makeStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import bg from "../../../images/background.png";
 import smallBg from "../../../images/smallScreenbg.png";
+import { Link } from 'react-router-dom';
 
 const useStyle = makeStyles({
     bgImage:{
@@ -44,7 +45,10 @@ const Slider = () => {
                     <Typography sx={{mt:4,mb:5,opacity:.7,pb:5,fontSize:"18px"}} variant="body2" gutterBottom>
                     Web hosting made EASY and AFFORDABLE
                     </Typography>
+                    <Link style={{textDecoration:"none"}} to="/themes">
                     <span as={Button} className={classes.sliderButton} >Get Started</span>
+                    </Link>
+                    
                 </Box>
                 </Grid>
             </Grid>
@@ -61,7 +65,9 @@ const Slider = () => {
                     Web hosting made EASY and AFFORDABLE
                     </Typography>
                     <Box sx={{pt:5}}></Box>
+                    <Link style={{textDecoration:"none"}} to="/themes">
                     <span className={classes.sliderButton} >Get Started</span>
+                    </Link>
                 </Box>
                 </Grid>
             </Grid>

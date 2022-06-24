@@ -43,9 +43,7 @@ const AddDomainModal = ({openBooking,handleBookingClose}) => {
       .then(data=>{
         if(data.insertedId){
             alert("Add domain Successfully")
-        //   setBookingSuccess(true) 
           setInterval(() => {
-            // setBookingSuccess(false) 
           }, 18000);
         }
       }) 
