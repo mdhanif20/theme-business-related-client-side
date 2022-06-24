@@ -11,7 +11,7 @@ import useAuth from './../../Shared/Firebase/useAuth';
 import Button from '@mui/material/Button';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-
+import StorageIcon from '@mui/icons-material/Storage';
 
 const useStyle = makeStyles({
     container:{
@@ -136,6 +136,13 @@ const LeftSideBar = () => {
                    
 
                    }
+
+                    <Link className={classes.linkDesign} to="/deshboard/purchasedStorage">
+                        <Button className={classes.item}>
+                            <StorageIcon style={{fontSize:"25px"}} className={classes.icon}/>
+                                <Typography style={{fontWeight:500}} className={classes.text}>Storage</Typography>
+                        </Button>
+                    </Link>
 
                       <Link className={classes.linkDesign} to="/contact">
                         <Button className={classes.item}>

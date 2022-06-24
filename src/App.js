@@ -22,6 +22,7 @@ import ThemePurchase from './Pages/Deshboard/Purchased/Theme/ThemePurchase';
 import DomainPurchase from './Pages/Deshboard/Purchased/Domain/DomainPurchase';
 import HostingPurchase from './Pages/Deshboard/Purchased/Hosting/HostingPurchase';
 import Contact from './Pages/Contact/Contact';
+import StoragePurchased from './Pages/Deshboard/Purchased/Storage/StoragePurchased';
 
 
 
@@ -38,16 +39,19 @@ function App() {
                 <Route path="/domain" element={<Domain/>} />
                 <Route path="/hostings" element={<Hostings/>} />
                 <Route path="/reagister" element={<Reagister/>} />
+                
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/deshboard/*" element={<Deshboard/>}>
                   <Route path="*" element={<ThemePurchase/>} /> 
                   <Route path="purchasedDomain" element={<DomainPurchase/>} /> 
                   <Route path="purchasedHosting" element={<HostingPurchase/>} /> 
+                  <Route path="purchasedStorage" element={<StoragePurchased/>} />
                       <Route path="*" element={<AdminPrivateRoute/>}> 
                           <Route path="makeadmin" element={<MakeAdmin/>}/>
                           <Route path="editTheme" element={<ThemesAdmin/>}/>
                           <Route path="editDomain" element={<DomainAdmin/>}/>
                           <Route path="editHosting" element={<HostingAdmin/>}/>
+                          
                       </Route>
                   </Route>
               </Routes>

@@ -9,7 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import useAuth from '../../Shared/Firebase/useAuth';
 import StorageBuyModal from './StorageBuyModal';
-
+import Typography from '@mui/material/Typography';
 
 
 const useStyle = makeStyles({
@@ -223,21 +223,7 @@ const Storage = () => {
                             
                             </Box>
                             </Grid>
-                            {/* <Grid sx={{textAlign: "end"}} md={4}>
-                            <Button 
-                            style={
-                                {
-                                    background: "linear-gradient(to right,#544CF9,#8F5FF9)",
-                                    fontSize: "18px",
-                                    padding: "7px 27px",
-                                    borderRadius: "30px",
-                                    boxShadow: 0,
-                                    
-                                    }
-                            }
-                            variant="contained">BUY NOW</Button>
-                             
-                             </Grid> */}
+                            
                             </Grid>
                         </Box>
                     
@@ -271,7 +257,19 @@ const Storage = () => {
                                 <TableCell>PRICE</TableCell>
                                 <TableCell align="right">{selected?.price}</TableCell>
                             </TableRow>
-                       
+                            
+                                 <Typography sx={{textAlign:"right",py:2}} variant="body2" gutterBottom>
+                                 <Button 
+                                onClick = {()=>buyStorage(selected)}
+                                style={{
+                                    background: "linear-gradient(to right,#544CF9,#8F5FF9)",
+                                    fontSize: "18px",
+                                    padding: "7px 27px",
+                                    borderRadius: "30px",
+                                    boxShadow: 0
+                                }}
+                                variant="contained">BUY NOW</Button>
+                                </Typography>
                     </TableContainer>
                 </Box>
             </Container>
