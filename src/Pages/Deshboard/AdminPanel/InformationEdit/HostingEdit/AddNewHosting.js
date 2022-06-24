@@ -6,43 +6,39 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 
-const AddDomainModal = ({openBooking,handleBookingClose}) => { 
+const AddNewHosting = ({openBooking,handleBookingClose}) => { 
    
-    const domainData = {
-      price:"",
-      review:"",
-      totalReview:"",
-      details:"",
-      websiteName:"",
-      websiteImg:"",
-      clientCodeLink:"",
-      serverCodeLink:"",
-      liveSide:""
+    const hostingData = {
+      type:"",
+      speed:"",
+      scalable:"",
+      deshboard:"",
+      price:""
     }
-    const [domain,setDomain] = useState(domainData);
+    const [hosting,setHosting] = useState(hostingData);
 
 
     const OnBlurhandle = e =>{
       const field = e.target.name;
       const value = e.target.value;
-      const newInfo = {...domain};
+      const newInfo = {...hosting};
       newInfo[field] = value
-      setDomain(newInfo);
+      setHosting(newInfo);
   }
   
    
-    const addDomain = e =>{
-        fetch("http://localhost:5000/deshboard/domain",{
+    const addhosting = e =>{
+        fetch("http://localhost:5000/deshboard/hosting",{
         method:"POST",
         headers:{
           "content-type":"application/json"
         },
-        body: JSON.stringify(domain)
+        body: JSON.stringify(hosting)
       })
       .then(res => res.json())
       .then(data=>{
         if(data.insertedId){
-            alert("Add domain Successfully")
+            alert("Add hosting Successfully")
         //   setBookingSuccess(true) 
           setInterval(() => {
             // setBookingSuccess(false) 
@@ -70,18 +66,45 @@ const AddDomainModal = ({openBooking,handleBookingClose}) => {
              borderRadius:"10px"
           }}>
             <Typography sx={{color:"#26C9C4",mb:2}} id="modal-modal-title" variant="h6" component="h2">
-            Add New domain
+            Add New hosting
             </Typography>
               
               <form>
 
                     <TextField
                     sx={{width:"100%",my:2}}
-                    label="suffix"
+                    label="Hosting"
                     onBlur={OnBlurhandle}
-                    name="suffix"
+                    name="type"
                     id="outlined-size-small"
-                    defaultValue="domain suffix" 
+                    defaultValue="Hosting Header" 
+                    size="small"
+                    />
+                    <TextField
+                    sx={{width:"100%",my:2}}
+                    label="Speed"
+                    onBlur={OnBlurhandle}
+                    name="speed"
+                    id="outlined-size-small"
+                    defaultValue="Hosting Speed" 
+                    size="small"
+                    />
+                    <TextField
+                    sx={{width:"100%",my:2}}
+                    label="Scalable"
+                    onBlur={OnBlurhandle}
+                    name="scalable"
+                    id="outlined-size-small"
+                    defaultValue="Scalable" 
+                    size="small"
+                    />
+                    <TextField
+                    sx={{width:"100%",my:2}}
+                    label="Deshboard Type"
+                    onBlur={OnBlurhandle}
+                    name="deshboard"
+                    id="outlined-size-small"
+                    defaultValue="Deshboard Type" 
                     size="small"
                     />
                     <TextField
@@ -90,11 +113,11 @@ const AddDomainModal = ({openBooking,handleBookingClose}) => {
                     onBlur={OnBlurhandle}
                     name="price"
                     id="outlined-size-small"
-                    defaultValue="domain price" 
+                    defaultValue="Price" 
                     size="small"
                     />
 
-                <Button onClick={()=> addDomain()}
+                <Button onClick={()=> addhosting()}
                 style={
                     {
                         background:"#8F40FB",
@@ -107,11 +130,11 @@ const AddDomainModal = ({openBooking,handleBookingClose}) => {
                         color:"#fff",
                         margin:"0px 0px 5px 0px"
                         }
-                    } variant="contained">Add Domain</Button>
+                    } variant="contained">Add hosting</Button>
               </form>
           </Box>
       </Modal>
     );
 };
 
-export default AddDomainModal;
+export default AddNewHosting;

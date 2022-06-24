@@ -27,7 +27,6 @@ const BuyThemeModal = ({openBooking,handleBookingClose,data}) => {
       const details={
           email:`${users.email}`,
           website:`${websiteName}`,
-          id:`${id}`,
           price:`${price}`
       }
       fetch("http://localhost:5000/themeBuy",{
@@ -78,14 +77,6 @@ const BuyThemeModal = ({openBooking,handleBookingClose,data}) => {
                   label="Website Name"
                   id="outlined-size-small"
                   defaultValue={websiteName}
-                  size="small"
-                  />
-                  <TextField
-                  disabled
-                  sx={{width:"100%",my:2}}
-                  label="Website Id"
-                  id="outlined-size-small"
-                  defaultValue={id}
                   size="small"
                   />
                   <TextField

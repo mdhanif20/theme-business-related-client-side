@@ -25,7 +25,7 @@ const DomainModal = ({ openBooking,handleBookingClose,Price,suffixValu, writtenD
 
     const {users} = useAuth();
     const [calculatedPrice, setCalculatedPrice] = useState(Price);
-    const [year,setYear] = useState('');
+    const [year,setYear] = useState(1);
     const priceCalculate = e =>{
         const value = e.target.value;
         const number = value.split(" ");

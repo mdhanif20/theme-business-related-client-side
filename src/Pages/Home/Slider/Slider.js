@@ -25,7 +25,7 @@ const useStyle = makeStyles({
         fontSize:"1.5rem",
         color:"#fff",
         padding:"10px 40px",
-        borderRadius:"30px",
+        borderRadius:"30px"
     }
 })
 
@@ -60,6 +60,7 @@ const Slider = () => {
                     <Typography sx={{mt:4,mb:5,opacity:.7,fontSize:"18px"}} variant="body2" gutterBottom>
                     Web hosting made EASY and AFFORDABLE
                     </Typography>
+                    <Box sx={{pt:5}}></Box>
                     <span className={classes.sliderButton} >Get Started</span>
                 </Box>
                 </Grid>

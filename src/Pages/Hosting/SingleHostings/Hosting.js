@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import HostingModal from '../HostingModal/HostingModal';
 
 const Hosting = ({hosting}) => {
-    const {type,text1,text2,text3,img}= hosting;
+    const {type,speed,scalable,deshboard,price}= hosting;
     const [openBooking, setOpenBooking] = React.useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
     const handleBookingClose = () => setOpenBooking(false);
@@ -21,23 +21,23 @@ const Hosting = ({hosting}) => {
                         <Box sx={{display:"flex",justifyContent:"space-around",mt:3,mb:3}}>
                             <Box sx={{opacity:".9",textAlign:"start"}}>
                                 <Typography variant="subtitle1" gutterBottom component="div">
-                                    {text1}
+                                    {speed}
                                 </Typography>
                                 <Typography variant="subtitle1" gutterBottom component="div">
-                                    {text2}
+                                    {scalable}
                                 </Typography>
                                 <Typography variant="subtitle1" gutterBottom component="div">
-                                    {text3}
+                                    {deshboard}
                                 </Typography>
                                 <Typography sx={{mt:3}} variant="caption" display="block" gutterBottom>
                                 Starting 
                                 <Typography sx={{display:"inline",color:"#F6A22D"}} variant="h5" gutterBottom component="div">
-                                 $3.99/mo*
+                                 ${price}/mo*
                                 </Typography>
                             </Typography>
                             </Box>
                             <Box>
-                                <img src={img} alt="" />
+                                {/* <img src={img} alt="" /> */}
                             </Box>
                         </Box>
                        
@@ -64,6 +64,7 @@ const Hosting = ({hosting}) => {
                     openBooking={openBooking}
                     handleBookingClose={handleBookingClose}
                     hosting={hosting}
+                    Price={hosting.price}
                     >
                     </HostingModal>
                 </Box>

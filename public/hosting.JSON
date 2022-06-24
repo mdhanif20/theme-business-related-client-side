@@ -39,12 +39,11 @@
       "id": 4,
       "type": "Dedicated Hosting",
       "img": "../src/images/hosting.png",
-      "text1": "Up to 2X Faster",
-      "text2": "4X More Scalable",
-      "text3": "Intuitive Dashboard",
+      "speed": "Up to 2X Faster",
+      "scalable": "4X More Scalable",
+      "deshboard": "Intuitive Dashboard",
       "costText": "Starting",
       "cost": "$3.00/mo*",
-      "button": "GET STARTED",
-      "buttonUrl": "#home"
+      "button": "GET STARTED"
     }
   ]

@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import useAuth from './../../Shared/Firebase/useAuth';
 
 
 const style = {
@@ -18,43 +19,46 @@ const style = {
     borderRadius:"10px"
   };
 
-const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
-    const {type,text1,text2,text3,img,buttonUrl}= hosting;
-    const [price, setPrice] = useState("95.76");
+const HostingModal = ({openBooking,handleBookingClose,hosting,Price}) => {
+    const {type,speed,scalable,deshboard,price}= hosting;
+    const {users} = useAuth();
+    const [calculatedPrice, setCalculatedPrice] = useState(Price);
+    const [year,setYear] = useState(1);
     const priceCalculate = e =>{
         const value = e.target.value;
         const number = value.split(" ");
-        const price = (number[0] *3.99 * 12).toFixed(2); 
-        setPrice(price);
+        setYear(number[0])
+        const price = (number[0] * Price).toFixed(2); 
+        setCalculatedPrice(price);
     }
+  
 
-    const defaultInfo = {
-        hosting: type,
-        speed: text1,
-        ability: text2,
-        hostingType: text3,
-        price: "95.76"
-    }
-    const [buyHosting,setbuyHosting] = useState(defaultInfo); 
+   
+   /*  const [buyHosting,setbuyHosting] = useState(defaultInfo); 
     const handleOnBlur = e =>{
       const field = e.target.name;
       const value = e.target.value;
       const newInfo = {...buyHosting};
       newInfo[field] = value
       setbuyHosting(newInfo);
-  }
+  } */
    
     const bookingSubmit = e =>{
-        const booking = {
-            ...buyHosting,
-            price: e.price
-          }
+      const defaultInfo = {
+        type: type,
+        email: users.email,
+        speed: speed,
+        scalable: scalable,
+        deshboard: deshboard,
+        price: calculatedPrice,
+        time:year
+      }
         fetch("http://localhost:5000/hosting",{
         method:"POST",
         headers:{
           "content-type":"application/json"
         },
-        body: JSON.stringify(booking)
+        body: JSON.stringify(defaultInfo)
       })
       .then(res => res.json())
       .then(data=>{
@@ -87,7 +91,7 @@ const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
                   sx={{width:"100%",my:2}}
                   label="Speed"
                   id="outlined-size-small"
-                  defaultValue={text1}
+                  defaultValue={type}
                   size="small"
                   />
                   <TextField
@@ -95,7 +99,16 @@ const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
                   sx={{width:"100%",my:2}}
                   label="Ability"
                   id="outlined-size-small"
-                  defaultValue={text2}
+                  defaultValue={speed}
+                  size="small"
+                  />
+            <Box sx={{display:"flex"}}>
+                  <TextField
+                  disabled
+                  sx={{width:"100%",my:2}}
+                  label="Scalable"
+                  id="outlined-size-small"
+                  defaultValue={scalable}
                   size="small"
                   />
                   <TextField
@@ -103,40 +116,31 @@ const HostingModal = ({openBooking,handleBookingClose,hosting}) => {
                   sx={{width:"100%",my:2}}
                   label="Deshboard"
                   id="outlined-size-small"
-                  defaultValue={text3}
+                  defaultValue={deshboard}
                   size="small"
                   />
-
-                
+            </Box> 
              <Box sx={{display:"flex"}}>
+              <TextField
+                      sx={{width:"100%",my:2}}
+                      label="Number Of Year"
+                      name="time"
+                      onChange={priceCalculate}
+                      id="outlined-size-small"
+                      defaultValue="1 year"
+                      size="small"
+                      />
                 <TextField
-                    disabled
-                    sx={{width:"100%",my:2,mr:1}}
-                    label="Monthly"
-                    name="payment"
-                    id="outlined-size-small"
-                    defaultValue="$3.99/mo*"
-                    size="small"
-                    />
-                    <TextField
-                    sx={{width:"100%",my:2,ml:1}}
-                    label="Number Of Year"
-                    name="weight"
-                    onChange={priceCalculate}
-                    id="outlined-size-small"
-                    defaultValue="2 year"
-                    size="small"
-                    />
+                      disabled
+                      sx={{width:"100%",my:2}}
+                      label="Total Price"
+                      name="price"
+                      id="outlined-size-small"
+                      value={`$${calculatedPrice} USD`}
+                      size="small"
+                      />
                </Box>
-               <TextField
-                    disabled
-                    sx={{width:"100%",my:2}}
-                    label="Total Price"
-                    name="Price"
-                    id="outlined-size-small"
-                    value={`$${price} USD`}
-                    size="small"
-                    />
+
                 <Button onClick={()=> bookingSubmit({price})} style={{backgroundImage: "linear-gradient(to right, #19D3AE , #0FEFCB)",
             fontSize:"1.1rem"}} variant="contained">Buy Now</Button>
               </form>

@@ -7,7 +7,9 @@ import Button from '@mui/material/Button';
 
 
 const UpdateThemeModal = ({openBooking,handleBookingClose,theme}) => { 
-   
+
+  const [updateTheme,setUpdateTheme] = useState();
+  useEffect(()=>{
     const themeData = {
       price:`${theme.price}`,
       review:`${theme.review}`,
@@ -19,7 +21,8 @@ const UpdateThemeModal = ({openBooking,handleBookingClose,theme}) => {
       serverCodeLink:`${theme.serverCodeLink}`,
       liveSide:`${theme.liveSide}`
     }
-    const [updateTheme,setUpdateTheme] = useState(themeData);
+    setUpdateTheme(themeData);
+  },[theme])
 
     const OnBlurhandle = e =>{
       const field = e.target.name;

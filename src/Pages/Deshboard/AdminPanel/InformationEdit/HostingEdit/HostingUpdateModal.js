@@ -7,39 +7,41 @@ import Button from '@mui/material/Button';
 
 
 
-const UpdateDomainModal = ({openBooking,handleBookingClose,id,domain}) => { 
+const HostingUpdateModal = ({openBooking,handleBookingClose,hosting}) => { 
 
-    const [updatedomain,setUpdatedomain] = useState({});
+    const [updateHosting,setUpdateHosting] = useState({});
     useEffect(()=>{
-        const domainData = {
-            suffix:`${domain.suffix}`,
-            price:`${domain.price}`
+        const hostingData = {
+            type:`${hosting.type}`,
+            speed:`${hosting.speed}`,
+            scalable:`${hosting.scalable}`,      
+            deshboard:`${hosting.deshboard}`,      
+            price:`${hosting.price}`
           }
-          setUpdatedomain(domainData)
-    },[domain])
+          setUpdateHosting(hostingData)
+    },[hosting])
 
-    console.log(updatedomain)
     const OnBlurhandle = e =>{
       const field = e.target.name;
       const value = e.target.value;
-      const newInfo = {...updatedomain};
+      const newInfo = {...updateHosting};
       newInfo[field] = value
-      setUpdatedomain(newInfo);
+      setUpdateHosting(newInfo);
   }
 
-    const updatedomainData = id =>{
-            const url = `http://localhost:5000/domain/${id}`;
+    const updateHostingData = id =>{
+            const url = `http://localhost:5000/hosting/${id}`;
             fetch(url,{
                 method:"PUT",
                 headers:{
                     'content-type':"application/json"
                 },
-                body: JSON.stringify(updatedomain)
+                body: JSON.stringify(updateHosting)
             })
             .then(res => res.json())
             .then(data =>{
                 if(data.modifiedCount>0){
-                    alert("Updated Successfully")
+                    alert("Updated Hosting Successfully")
                     // setUser({}) 
                 }
             })
@@ -64,18 +66,45 @@ const UpdateDomainModal = ({openBooking,handleBookingClose,id,domain}) => {
              borderRadius:"10px"
           }}>
             <Typography sx={{color:"#26C9C4",mb:2}} id="modal-modal-title" variant="h6" component="h2">
-            Update Your domain
+            Update Your hosting
             </Typography>
               
               <form>
 
                     <TextField
                     sx={{width:"100%",my:2}}
-                    label="Domain Suffix"
+                    label="Hosting"
                     onBlur={OnBlurhandle}
-                    name="suffix"
+                    name="type"
                     id="outlined-size-small"
-                    defaultValue={domain.suffix}
+                    defaultValue={hosting.type}
+                    size="small"
+                    />
+                    <TextField
+                    sx={{width:"100%",my:2}}
+                    label="Speed"
+                    onBlur={OnBlurhandle}
+                    name="speed"
+                    id="outlined-size-small"
+                    defaultValue={hosting.speed} 
+                    size="small"
+                    />
+                    <TextField
+                    sx={{width:"100%",my:2}}
+                    label="Scalable"
+                    onBlur={OnBlurhandle}
+                    name="scalable"
+                    id="outlined-size-small"
+                    defaultValue={hosting.scalable} 
+                    size="small"
+                    />
+                    <TextField
+                    sx={{width:"100%",my:2}}
+                    label="Deshboard"
+                    onBlur={OnBlurhandle}
+                    name="deshboard"
+                    id="outlined-size-small"
+                    defaultValue={hosting.deshboard} 
                     size="small"
                     />
                     <TextField
@@ -84,11 +113,11 @@ const UpdateDomainModal = ({openBooking,handleBookingClose,id,domain}) => {
                     onBlur={OnBlurhandle}
                     name="price"
                     id="outlined-size-small"
-                    defaultValue={domain.price} 
+                    defaultValue={hosting.price} 
                     size="small"
                     />
                  
-                <Button onClick={()=> updatedomainData(domain._id)}
+                <Button onClick={()=> updateHostingData(hosting._id)}
                 style={
                     {
                         background:"#8F40FB",
@@ -101,11 +130,11 @@ const UpdateDomainModal = ({openBooking,handleBookingClose,id,domain}) => {
                         color:"#fff",
                         margin:"10px 0px"
                         }
-                    } variant="contained">Update domain</Button>
+                    } variant="contained">Update hosting</Button>
               </form>
           </Box>
       </Modal>
     );
 };
 
-export default UpdateDomainModal;
+export default HostingUpdateModal;

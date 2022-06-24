@@ -20,10 +20,10 @@ import AddDomainModal from './AddDomainModal';
 const DomainAdmin = () => {
     const [domains,setDomains] = useState([]);
     const [update,setUpdate]= useState({});
-    const [openBooking, setOpenBooking] = React.useState(false);
+    const [openBooking, setOpenBooking] = useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
     const handleBookingClose = () => setOpenBooking(false);
-    const [openUpdate, setOpenUpdate] = React.useState(false);
+    const [openUpdate, setOpenUpdate] = useState(false);
     const handleUpdateOpen = () => setOpenUpdate(true);
     const handleUpdateClose = () => setOpenUpdate(false);
     const updateModalOpen = e =>{
@@ -70,7 +70,7 @@ const DomainAdmin = () => {
             <Link style={{textDecoration:'none',color:"#fff"}} to="/deshboard/editDomain"> <Button style={{color:"#fff",fontSize:"18px"}}>Domain</Button> </Link>
             <Link style={{textDecoration:'none',color:"#fff"}} to="/deshboard/editHosting"> <Button style={{color:"#fff",fontSize:"18px"}}>Hosting</Button> </Link>
         </Box> 
-            <Box sx={{opacity:"0",mb:{xs:-15,sm:-12,md:-3}}}>
+            <Box sx={{opacity:"0",mb:{xs:-12,sm:-10,md:-3}}}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque repudiandae totam error,unde possimus, commodi officia, dolorum accusamus vitae quia dicta. Minus totam nobis ratione.repudiandae totam error, unde possimus, commodi officia, dolorum accusamus vitae quia dicta. Minus totam nobis ratione.
             </Box> 
             <p style={{marginTop:'0px',textAlign:"end"}}>
@@ -107,18 +107,7 @@ const DomainAdmin = () => {
                         </TableHead>
                         
                         <TableBody>
-
-                       {/* {
-                            themes.map(theme=><ThemeAdmin
-                                key={theme._id}
-                                theme={theme}
-                                value={value}
-                                >
-                                {
-                                    theme._id && serialNumber()
-                                }
-                                </ThemeAdmin> )
-                        } */}  
+ 
                        {
                             domains.map(domain=> <TableRow
                                 style={{color:"red"}}

@@ -12,6 +12,9 @@ import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import useAuth from './../../Shared/Firebase/useAuth';
 import Button from '@mui/material/Button';
+import WebAssetIcon from '@mui/icons-material/WebAsset';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+
 
 const useStyle = makeStyles({
     container:{
@@ -55,7 +58,7 @@ const useStyle = makeStyles({
     textSmall:{
         fontWeight:800,
         border:"2px solid #8F40FB",
-        padding:"2px 16px",
+        padding:"2px 14px",
         borderRadius:"30px",
         backgroundColor:"#8F40FB",
         marginLeft:"-100%",
@@ -98,8 +101,8 @@ const LeftSideBar = () => {
 
     return (
         <Box sx={{display:"flex"}}>
-            <Box sx={{display:{xs:"none",sm:"block"}}}>
-                    <Container sx={{  bgcolor:"#8F40FB",width:"200px"}} className={classes.container}>
+            <Box sx={{display:{xs:"none",sm:"none",md:'block'}}}>
+                    <Container style={{  backgroundColor:"#8F40FB",width:"180px"}} className={classes.container}>
 
                     <Link className={classes.linkDesign} to="/deshboard">
                     <Button className={classes.item}>
@@ -108,10 +111,10 @@ const LeftSideBar = () => {
                     </Button>
                     </Link>
 
-                    <Link className={classes.linkDesign} to="/appointment">
+                    <Link className={classes.linkDesign} to="/themes">
                         <Button className={classes.item}>
-                            <CalendarTodayIcon style={{fontSize:"25px"}} className={classes.icon}/>
-                            <Typography style={{fontWeight:500}}className={classes.text}>Appointment</Typography>   
+                            <WebAssetIcon style={{fontSize:"25px"}} className={classes.icon}/>
+                            <Typography style={{fontWeight:500}}className={classes.text}>Theme</Typography>   
                         </Button>
                     </Link>
                     
@@ -122,7 +125,7 @@ const LeftSideBar = () => {
                     admin && <Box>
                     <Link className={classes.linkDesign} to="/deshboard/editTheme">
                         <Button className={classes.item}>
-                            <PeopleIcon style={{fontSize:"25px"}}  className={classes.icon}/>
+                            <Settings style={{fontSize:"25px"}}  className={classes.icon}/>
                             <Typography style={{fontWeight:500}}className={classes.text}>Update Info</Typography>
                         </Button>
                     </Link>
@@ -136,18 +139,15 @@ const LeftSideBar = () => {
                    
 
                    }
-                      
 
+                      <Link className={classes.linkDesign} to="/contact">
+                        <Button className={classes.item}>
+                            <ContactPageIcon style={{fontSize:"25px"}} className={classes.icon}/>
+                            <Typography style={{fontWeight:500}}className={classes.text}>Contact Us</Typography>   
+                        </Button>
+                    </Link>
+                    
 
-                    <Button className={classes.item}>
-                        <AssignmentIcon style={{fontSize:"25px"}}  className={classes.icon}/>
-                        <Typography style={{fontWeight:500}}className={classes.text}>Prescription</Typography>
-                    </Button>
-                   
-                    <Button className={classes.item}>
-                        <Settings style={{fontSize:"25px"}}  className={classes.icon}/>
-                        <Typography style={{fontWeight:500}}className={classes.text}>Settings</Typography>
-                    </Button>
                     {
                         users?.email?
                         <Button onClick={()=>logOutEmail()} className={classes.item}>
@@ -169,7 +169,7 @@ const LeftSideBar = () => {
 
 
 
-            <Box sx={{display:{xs:"block",sm:"none"},zIndex:1}}>
+            <Box sx={{display:{xs:"block",sm:"block",md:"none"},zIndex:1}}>
                     <Container style={{width:"40px"}} sx={{  bgcolor:"#8F40FB"}} className={classes.containerSmall}>
                     <Link className={classes.linkDesign} to="/deshboard"> 
                         <Button className={classes.itemSmall}>
@@ -177,10 +177,10 @@ const LeftSideBar = () => {
                             <Typography style={{fontWeight:500}}className={classes.textSmall}>Deshboard</Typography>
                         </Button>
                     </Link>
-                    <Link className={classes.linkDesign} to="/appointment">
+                    <Link className={classes.linkDesign} to="/themes">
                         <Button className={classes.itemSmall}>
-                            <CalendarTodayIcon style={{fontSize:"25px"}} className={classes.iconSmall}/>
-                            <Typography style={{fontWeight:500}}className={classes.textSmall}>Appointment</Typography>
+                            <WebAssetIcon style={{fontSize:"25px"}} className={classes.iconSmall}/>
+                            <Typography style={{fontWeight:500}}className={classes.textSmall}>Theme</Typography>
                         </Button>
                     </Link>
                     
@@ -190,8 +190,8 @@ const LeftSideBar = () => {
                         admin && <Box>
                         <Link className={classes.linkDesign} to="/deshboard/editTheme">
                         <Button className={classes.itemSmall}>
-                            <PeopleIcon style={{fontSize:"25px"}}  className={classes.iconSmall}/>
-                            <Typography style={{fontWeight:500}}className={classes.textSmall}>Admin Panel</Typography>
+                            <Settings style={{fontSize:"25px"}}  className={classes.iconSmall}/>
+                            <Typography style={{fontWeight:500}}className={classes.textSmall}>UpdateInfo</Typography>
                         </Button>
                         </Link>
                         <Link className={classes.linkDesign} to="/deshboard/makeadmin">
@@ -203,26 +203,25 @@ const LeftSideBar = () => {
                         </Box>
                        }
                           
+                    <Link className={classes.linkDesign} to="/contact">
+                        <Button className={classes.itemSmall}>
+                            <WebAssetIcon style={{fontSize:"25px"}} className={classes.iconSmall}/>
+                            <Typography style={{fontWeight:500}}className={classes.textSmall}>ContactUs</Typography>
+                        </Button>
+                    </Link>
                     
-                    <Button className={classes.itemSmall}>
-                        <AssignmentIcon style={{fontSize:"25px"}}  className={classes.iconSmall}/>
-                        <Typography style={{fontWeight:500}}className={classes.textSmall}>Prescription</Typography>
-                    </Button>
-                    <Button className={classes.itemSmall}>
-                        <Settings style={{fontSize:"25px"}}  className={classes.iconSmall}/>
-                        <Typography style={{fontWeight:500}} className={classes.textSmall}>Settings</Typography>
-                    </Button>
+                   
                     {
                         users?.email?
                         <Button onClick={()=>logOutEmail()} className={classes.itemSmall}>
                             <Logout style={{fontSize:"25px"}}  className={classes.iconSmall}/>
-                            <Typography style={{fontWeight:500}} className={classes.textSmall}>Log Out</Typography>
+                            <Typography style={{fontWeight:500}} className={classes.textSmall}>LogOut</Typography>
                         </Button>
                         :
                         <Link style={{textDecoration:"none",color:"#fff"}} to="/login">
                             <Button className={classes.itemSmall}>
                                 <Logout style={{fontSize:"25px"}}  className={classes.iconSmall}/>
-                                <Typography style={{fontWeight:500}} className={classes.textSmall}>Log In</Typography>
+                                <Typography style={{fontWeight:500}} className={classes.textSmall}>LogIn</Typography>
                             </Button>
                         </Link>
                       }

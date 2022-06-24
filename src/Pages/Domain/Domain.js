@@ -128,25 +128,13 @@ const Domain = () => {
                             label="suffix"
                             onChange={handleChange}
                         >
-                            {
-                               suffixs.map(suffix =><MenuItem key={suffix._id} style={{display:"block",paddingLeft:"5px"}} value={".com"}>{suffix.suffix
-                               }</MenuItem>) 
-                            }
-                            
-                            {/* <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".net"}>.net</MenuItem>
+                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".net"}>.com</MenuItem>
+                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".net"}>.net</MenuItem>
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".org"}>.org</MenuItem>
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".info"}>.info</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".US"}>.US</MenuItem>
+                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".US"}>.bd</MenuItem>
                             <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".eu"}>.eu</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".bd"}>.bd</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".lu"}>.lu</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".no"}>.no</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".bt"}>.bt</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".ex"}>.ex</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".cc"}>.cc</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".nu"}>.nu</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={".br"}>.br</MenuItem>
-                            <MenuItem style={{display:"block",paddingLeft:"5px"}} value={'.bt'}>.bt</MenuItem> */}
+                         
                         </Select>
 
                         </FormControl>

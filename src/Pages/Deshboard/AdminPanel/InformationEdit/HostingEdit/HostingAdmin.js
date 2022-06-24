@@ -12,42 +12,41 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import AddIcon from '@mui/icons-material/Add';
-import AddThemeModal from './AddThemeModal';
-import UpdateThemeModal from './UpdateThemeModal';
+import AddNewHosting from './AddNewHosting';
+import HostingUpdateModal from "./HostingUpdateModal";
 
 
-const ThemesAdmin = () => {
-    const [themes,setThemes] = useState([]);
+const HostingAdmin = () => {
+    const [hostings,setHostings] = useState([]);
+    const [update,setUpdate]= useState({});
     const [openBooking, setOpenBooking] = useState(false);
-    const [updateTheme,setUpdateTheme] =useState([]);
     const handleBookingOpen = () => setOpenBooking(true);
     const handleBookingClose = () => setOpenBooking(false);
-    const [openUpdate, setOpenUpdate] = React.useState(false);
+    const [openUpdate, setOpenUpdate] = useState(false);
     const handleUpdateOpen = () => setOpenUpdate(true);
     const handleUpdateClose = () => setOpenUpdate(false);
-
+    const updateModalOpen = e =>{
+        setUpdate(e)
+        handleUpdateOpen()
+    }
     let value = 0;
     const serialNumber = (n)=>{
         value = value+1;
     }
 
-    const upadteTheme = e =>{
-        setUpdateTheme(e);
-        handleUpdateOpen();
-    }
     //load theme
     useEffect(()=>{
-        fetch("http://localhost:5000/themes")
+        fetch("http://localhost:5000/hosting")
         .then(res=> res.json())
-        .then(data => setThemes(data))
+        .then(data => setHostings(data))
     },[openBooking,openUpdate])
 
 
     // for delete 
-  const deleteTheme = id =>{
+  const deleteHosting = id =>{
         const proceed = window.confirm("Are you sure, you want to delete?")
         if(proceed){
-            const url = `http://localhost:5000/theme/${id}`;
+            const url = `http://localhost:5000/hosting/${id}`;
             fetch(url,{
                 method:"DELETE"
             })
@@ -55,8 +54,8 @@ const ThemesAdmin = () => {
             .then(data =>{
                 if(data.deletedCount>0){
                     alert("Delete Successfully")
-                    const remainingUser = themes.filter(theme=> theme._id !== id) 
-                    setThemes(remainingUser) 
+                    const remainingUser = hostings.filter(theme=> theme._id !== id) 
+                    setHostings(remainingUser) 
                 }
             }) 
         }
@@ -89,7 +88,7 @@ const ThemesAdmin = () => {
                         margin:"0px 0px 15px 0px"
                         }
                     }
-                variant="contained"> <AddIcon/> Add New Theme</Button>
+                variant="contained"> <AddIcon/> Add New Hosting</Button>
             </p>
             
            <Card> 
@@ -97,72 +96,60 @@ const ThemesAdmin = () => {
                 <TableContainer style={{overflowX:"visible"}} component={Paper}>
                     <Table sx={{ width: "100%" }} aria-label="simple table">
                         <TableHead style={{position:"sticky",top:0,background:"#8F40FB"}}>
-                            <TableRow sx={{}}>
+                        <TableRow sx={{}}>
                                 <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>No</TableCell>
-                                <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Website</TableCell>
+                                <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Hosting</TableCell>
+                                <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Speed</TableCell>
                                 <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Price</TableCell>
-                                <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Rating</TableCell>
-                                <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Total Review</TableCell>
                                 <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Update</TableCell>
-                                <TableCell sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Delete</TableCell>
+                                <TableCell  sx={{padding:"10px",color:"#fff",fontSize:"18px",fontWeight:"500"}}>Delete</TableCell>
                             </TableRow>
                         </TableHead>
                         
                         <TableBody>
-
-                       {/* {
-                            themes.map(theme=><ThemeAdmin
-                                key={theme._id}
-                                theme={theme}
-                                value={value}
-                                >
-                                {
-                                    theme._id && serialNumber()
-                                }
-                                </ThemeAdmin> )
-                        } */}  
-                       {
-                            themes.map(theme=> <TableRow
+                        {
+                            hostings.map(hosting=><TableRow
+                                key={hosting._id}
                                 style={{color:"red"}}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                key={theme._id}
                                 >
                                     {
-                                        theme._id && serialNumber()
+                                        hosting._id && serialNumber()
                                     }
-                                <TableCell sx={{padding:"10px"}} align="left">{value}</TableCell>
-                                <TableCell sx={{padding:"10px"}} align="left">{theme.websiteName}</TableCell>
-                                <TableCell sx={{padding:"10px"}} align="left">{theme.price}</TableCell>
-                                <TableCell sx={{padding:"10px"}} align="left">{theme.review}</TableCell>
-                                <TableCell sx={{padding:"10px"}} align="left">{theme.totalReview}</TableCell>
-                                <TableCell onClick={()=>upadteTheme(theme)} sx={{padding:"10px",cursor:"pointer",color:'#357EDD'}} align="left">Update</TableCell>
-                                <TableCell onClick={()=>deleteTheme(theme._id)} sx={{padding:"10px",cursor:"pointer",color:'#ff7373'}} align="left">Delete</TableCell>
+                                <TableCell sx={{padding:"10px"}} align="left">
+                                {value}
+                                </TableCell>
+                                <TableCell sx={{padding:"10px"}} align="left">{hosting.type}</TableCell>
+                                <TableCell sx={{padding:"10px"}} align="left">{hosting.speed}</TableCell>
+                                <TableCell sx={{padding:"10px"}} align="left">${hosting.price}/mo*</TableCell>
+                                <TableCell onClick={()=>updateModalOpen(hosting)} sx={{padding:"10px",color:"#357EDD",cursor:"pointer"}} align="left">Update</TableCell>
+                                <TableCell onClick={()=>deleteHosting(hosting._id)} sx={{padding:"10px",color:"#ff7373",cursor:"pointer"}} align="left">Delete</TableCell>
                                 <Box>
-                                    <UpdateThemeModal
+                                    <HostingUpdateModal
                                         openBooking={openUpdate}
                                         handleBookingClose={handleUpdateClose}
-                                        theme={updateTheme} 
+                                        hosting={update} 
                                         >
-                                    </UpdateThemeModal>  
+                                    </HostingUpdateModal>   
                                 </Box>
-                                </TableRow>  )
+
+                            </TableRow>)
                         }  
-                         
                         </TableBody>
                     </Table>
                 </TableContainer>
                 </Scrollbars>
             </Card> 
-            <AddThemeModal
+        </Box>
+        <Box>
+        <AddNewHosting
             openBooking={openBooking}
             handleBookingClose={handleBookingClose}
             >
-            </AddThemeModal> 
-            
+            </AddNewHosting> 
         </Box>
-        
         </>
     );
 };
 
-export default ThemesAdmin;
+export default HostingAdmin;

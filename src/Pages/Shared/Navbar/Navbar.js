@@ -61,7 +61,15 @@ const Navbar = () => {
               <img src={logo} width="50px" height="50px" alt="" />
               </Typography>
 
-              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent: 'flex-end'  }}>
+
+
+
+
+
+
+
+
+              <Box sx={{ flexGrow: 1,mx:2, display: { xs: 'flex', sm:"flex" , md: 'none' },justifyContent: 'flex-end'  }}>
                 <IconButton
                   size="large"
                   aria-label="account of current user"
@@ -70,7 +78,7 @@ const Navbar = () => {
                   onClick={handleOpenNavMenu}
                   color="inherit"
                 >
-                  <MenuIcon />
+                  <MenuIcon  style={{color:"#fff"}}/>
                 </IconButton>
                 <Menu
                   id="menu-appbar"
@@ -91,40 +99,58 @@ const Navbar = () => {
                   }}
                 >
                   
-                    <MenuItem  onClick={handleCloseNavMenu}>
+                    <MenuItem style={{display:'block'}}  onClick={handleCloseNavMenu}>
                        <Link style={{textDecoration:"none",color:"#0F0C0B"}} to="/">
-                        <Typography textAlign="center">Home</Typography>
+                        <Typography textAlign="start" sx={{pl:1,pr:2,py:1}}>Home</Typography>
                       </Link>
                     </MenuItem>
 
-                    <MenuItem  onClick={handleCloseNavMenu}>
-                      <Link style={{textDecoration:"none",color:"#0F0C0B"}} to="/appointment">
-                         <Typography textAlign="center">Appointment</Typography>
+
+
+                    <MenuItem style={{display:'block'}} onClick={handleCloseNavMenu}>
+                      <Link style={{textDecoration:"none",color:"#0F0C0B"}} to="/themes">
+                         <Typography textAlign="start" sx={{pl:1,pr:2,py:1}}>Themes</Typography>
                       </Link>
                     </MenuItem>
+
+
+                    <MenuItem style={{display:'block'}} onClick={handleCloseNavMenu}>
+                      <Link style={{textDecoration:"none",color:"#0F0C0B"}} to="/domain">
+                         <Typography textAlign="start" sx={{pl:1,pr:2,py:1}}>Domain</Typography>
+                      </Link>
+                    </MenuItem>
+
+                    <MenuItem style={{display:'block'}} onClick={handleCloseNavMenu}>
+                      <Link style={{textDecoration:"none",color:"#0F0C0B"}} to="/hostings">
+                         <Typography textAlign="start" sx={{pl:1,pr:2,py:1}}>Hosting</Typography>
+                      </Link>
+                    </MenuItem>
+
 
                     {
                     users?.email && 
-                    <MenuItem  onClick={handleCloseNavMenu}>
+                    <MenuItem style={{display:'block'}}  onClick={handleCloseNavMenu}>
                           <Link style={{textDecoration:"none",color:"#0F0C0B"}} to="/deshboard">
-                            <Typography style={{color:"#0F0C0B"}} textAlign="center">Desh Board</Typography>
+                            <Typography style={{color:"#0F0C0B"}} textAlign="start" sx={{pl:1,pr:2,py:1}}>DeshBoard</Typography>
                           </Link>
                     </MenuItem>
                     }
 
-                    <MenuItem  onClick={handleCloseNavMenu}>
+
+
+                    <MenuItem style={{display:'block'}} onClick={handleCloseNavMenu}>
                       <Link style={{textDecoration:"none",color:"#0F0C0B"}} to="/contact">
-                         <Typography textAlign="center">Contact Us</Typography>
+                         <Typography textAlign="start" sx={{pl:1,pr:2,py:1}}>ContactUs</Typography>
                       </Link>
                     </MenuItem>
 
-                    <MenuItem  onClick={handleCloseNavMenu}>
+                    <MenuItem style={{display:'block'}}  onClick={handleCloseNavMenu}>
                     {
                         users?.email?
-                        <Typography onClick={()=>logOutEmail()} textAlign="center">Log Out</Typography>
+                        <Typography onClick={()=>logOutEmail()} textAlign="start" sx={{pl:1,pr:2,py:1}}>Log Out</Typography>
                         :
                      <Link style={{textDecoration:"none",color:"#0F0C0B"}} to="/login">
-                        <Typography textAlign="center">Login</Typography>
+                        <Typography textAlign="start" sx={{pl:1,pr:2,py:1}}>Login</Typography>
                      </Link>
                       }
                     </MenuItem>
@@ -136,7 +162,7 @@ const Navbar = () => {
 
 
 
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },justifyContent: 'flex-end' }}>
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', sm:"none" , md: 'flex' },justifyContent: 'flex-end' }}>
                 
                   <Button
                     onClick={handleCloseNavMenu}
@@ -184,6 +210,8 @@ const Navbar = () => {
                           </Link>
                       </Button>
                   }
+
+
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: '#fff', display: 'block' }}>
@@ -191,6 +219,7 @@ const Navbar = () => {
                          <Typography textAlign="center">Contact Us</Typography>
                       </Link>
                   </Button>
+
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: '#fff', display: 'block' }}>
