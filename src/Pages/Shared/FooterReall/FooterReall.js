@@ -160,11 +160,11 @@ const FooterReall = () => {
             </Container>
             
         </Box>
-        <Box style={{display:"block"}} sx={{borderTop:"1px solid rgb(203 203 203)"}}>
-            <p style={{padding:"10px 5px", textAlign:'start'}}>
+
+            <p style={{padding:"15px 5px 5px 5px", textAlign:'start',borderTop:"1px solid rgb(203 203 203)",backgroundColor:"#FCFEFF"}}>
             © 2022 Hogash.com | All rights reserved.
             </p>
-            </Box>
+
         </>
     );
 };
