@@ -26,6 +26,7 @@ const useStyle = makeStyles({
 const FooterReall = () => {
     const classes = useStyle();
     return (
+        <> 
         <Box sx={{pt:10}} className={classes.fullArea}>
             <Container>
                 <Grid container spacing={2}>
@@ -157,12 +158,14 @@ const FooterReall = () => {
                     </Grid>
                 </Grid>
             </Container>
-            <Box sx={{borderTop:"1px solid rgb(203 203 203)"}}>
-            <p style={{padding:"10px 0px", textAlign:'start'}}>
+            
+        </Box>
+        <Box style={{display:"block"}} sx={{borderTop:"1px solid rgb(203 203 203)"}}>
+            <p style={{padding:"10px 5px", textAlign:'start'}}>
             © 2022 Hogash.com | All rights reserved.
             </p>
             </Box>
-        </Box>
+        </>
     );
 };
 
