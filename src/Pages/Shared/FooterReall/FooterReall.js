@@ -30,11 +30,11 @@ const FooterReall = () => {
             <Container>
                 <Grid container spacing={2}>
                     <Grid xs={12} sm={3}>
-                    <Box sx={{textAlign:"start",my:5}} style={{textAlign:"start",color:"#000000",background:"none"}} >
+                    <Box sx={{textAlign:"start",my:5}} style={{textAlign:"start",color:"#000000",background:"none",border:"0px",borderRadius:"0px"}} >
                             <Typography  sx={{ fontWeight: 'bold',pb:2}} variant="button" display="block" gutterBottom>
                                 company
                             </Typography>
-                            <Box style={{ opacity:".6",py:2,display:"block"}}>
+                            <Box style={{ opacity:".6",py:2,display:"block",border:"0px",borderRadius:"0px"}}>
                                 <Typography variant="body1" gutterBottom>
                                     Associates
                                 </Typography>
@@ -56,8 +56,8 @@ const FooterReall = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid xs={12} sm={3} sx={{display:{xs:"none",sm:"block"}}}>
-                    <Box style={{border:"none",padding:0,boxShadow:'none'}} sx={{textAlign:"start",my:5,display:{xs:"none",sm:"block"}}} >
+                    <Grid xs={12} sm={3} style={{color:"black"}} sx={{display:{xs:"none",sm:"block"}}}>
+                    <Box style={{border:"none",padding:0,boxShadow:'none',background:"none"}} sx={{textAlign:"start",my:5,display:{xs:"none",sm:"block"}}} >
                             <Typography  sx={{ fontWeight: 'bold',pb:2}} variant="button" display="block" gutterBottom>
                                PRODUCTS
                             </Typography>
@@ -111,7 +111,7 @@ const FooterReall = () => {
                         </Box>
                     </Grid>
                     <Grid xs={12} sm={3}>
-                    <Box style={{width:'100%'}} sx={{textAlign:"start",py:5}} >
+                    <Box style={{width:'100%',display:"block"}} sx={{textAlign:"start",py:5}} >
                             <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                                 Follow us
                             </Typography>
@@ -125,7 +125,7 @@ const FooterReall = () => {
                                 <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                                 SUBSCRIBE US
                                 </Typography>
-                            <Box style={{width:"100%"}} sx={{ opacity:".6",py:2}}>
+                            <Box style={{width:"100%",display:"block"}} sx={{ opacity:".6",py:2}}>
                                 
                                 <Typography variant="body1" gutterBottom>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
