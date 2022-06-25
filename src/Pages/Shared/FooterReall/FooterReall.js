@@ -84,7 +84,7 @@ const FooterReall = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid xs={12} sm={3} sx={{display:{xs:"none",sm:"block"}}}>
+                    <Grid xs={12} sm={3} sx={{display:{xs:"none",sm:"none",md:"block"}}}>
                     <Box sx={{textAlign:"start",py:5,display:{xs:"none",sm:"none",md:"block"}}} >
                             <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                              SUPPORT
