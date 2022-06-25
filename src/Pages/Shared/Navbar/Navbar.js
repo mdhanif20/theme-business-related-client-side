@@ -38,7 +38,7 @@ const Navbar = () => {
 
 
     return (
-        <AppBar position="static" style={{backgroundColor:"#8200b9"}}>
+        <AppBar id="appBar" position="static" style={{backgroundColor:"#8200b9"}}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Typography
@@ -117,6 +117,11 @@ const Navbar = () => {
                          <Typography textAlign="start" sx={{pl:1,pr:2,py:1}}>Hosting</Typography>
                       </Link>
                     </MenuItem>
+                    <MenuItem style={{display:'block'}} onClick={handleCloseNavMenu}>
+                      <a style={{textDecoration:"none",color:"#0F0C0B"}} href="#storage">
+                         <Typography textAlign="start" sx={{pl:1,pr:2,py:1}}>Storage</Typography>
+                      </a>
+                    </MenuItem>
 
 
                     {
@@ -189,6 +194,15 @@ const Navbar = () => {
                       <Link style={{textDecoration:"none",color:"#fff"}} to="/hostings">
                         <Typography textAlign="center">Hosting</Typography>
                       </Link>
+                  </Button>
+
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    style={{color: '#fff'}}
+                    sx={{ my: 2, display: 'block' }}>
+                      <a style={{textDecoration:"none",color:"#fff"}} href="#storage">
+                        <Typography textAlign="center">Storage</Typography>
+                      </a>
                   </Button>
 
                   

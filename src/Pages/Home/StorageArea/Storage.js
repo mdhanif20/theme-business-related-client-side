@@ -71,8 +71,8 @@ const useStyle = makeStyles({
 const Storage = () => {
     const {users} = useAuth();
     const [value,setValue] = useState(false);
-    const [hostings,setHostings] = useState([]);
-    console.log(hostings)
+    const [storages,setStorages] = useState([]);
+    console.log(storages)
     const [getid,setGetid]=useState(1);
     const [selected,setSelected] = useState(1);
     const [openBooking, setOpenBooking] = useState(false);
@@ -98,13 +98,13 @@ const Storage = () => {
       useEffect(()=>{
             fetch("https://calm-anchorage-79518.herokuapp.com/storage")
             .then(res => res.json())
-            .then(data => setHostings(data))
+            .then(data => setStorages(data))
         },[getid])
     
         useEffect(()=>{
-            const select = hostings.find(host=> parseInt(host.id)===parseFloat(getid))
+            const select = storages.find(host=> parseInt(host.id)===parseFloat(getid))
             setSelected(select)
-        },[hostings])
+        },[storages])
 
     const vps = (a,b,e) =>{
         setValue(a);
@@ -115,7 +115,7 @@ const Storage = () => {
    
 
     return (
-        <Box sx={{my:10}}>
+        <Box id="storage" sx={{my:10}}>
             <Container>
             <h1 className={classes.header}>
                 Select Your Best Option

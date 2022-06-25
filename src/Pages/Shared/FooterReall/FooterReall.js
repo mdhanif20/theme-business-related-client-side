@@ -12,6 +12,11 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Button from '@mui/material/Button';
+import Fab from '@mui/material/Fab';
+import EditIcon from '@mui/icons-material/Edit';
+import NavigationIcon from '@mui/icons-material/Navigation';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardControlKeyIcon from '@mui/icons-material/KeyboardControlKey';
 
 
 const useStyle = makeStyles({
@@ -27,7 +32,20 @@ const FooterReall = () => {
     const classes = useStyle();
     return (
         <> 
-        <Box sx={{pt:10}} className={classes.fullArea}>
+        <Box>
+        <p style={{position:"fixed",right:"5px",bottom:"40px",zIndex:100}}>
+            <a href="#appBar" style={{color:"#8200B9"}}>
+            < KeyboardControlKeyIcon style={{fontSize:"2.8rem"}} />
+            </a>
+        </p>
+        <p style={{position:"fixed",right:"4px",bottom:"0px",zIndex:100}}>
+            <a href="#footer" style={{color:"#8200B9"}}>
+            < KeyboardArrowDownIcon style={{fontSize:"3rem"}}/>
+            </a>
+        </p>
+       
+        </Box>
+        <Box id="footer" sx={{pt:10}} className={classes.fullArea}>
             <Container>
                 <Grid container spacing={2}>
                     <Grid xs={12} sm={3}>
@@ -132,7 +150,7 @@ const FooterReall = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 </Typography>
 
-                                <span style={{display:"flex",marginTop:"25px",width:"100%"}}>
+                                <span style={{display:"flex",marginTop:"25px",width:"100%",zIndex:1}}>
                                     <input style={{
                                             fontSize: "16px",
                                             width:'100%',
