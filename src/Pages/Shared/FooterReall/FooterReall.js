@@ -31,7 +31,7 @@ const FooterReall = () => {
             <Container>
                 <Grid container spacing={2}>
                     <Grid xs={12} sm={3}>
-                    <Box sx={{textAlign:"start",my:5}} style={{textAlign:"start",color:"#000000",background:"none",border:"0px",borderRadius:"0px"}} >
+                    <Box sx={{textAlign:"start",my:5,ml:{xs:-3,sm:-2,md:0}}} style={{textAlign:"start",color:"#000000",background:"none",border:"0px",borderRadius:"0px"}} >
                             <Typography  sx={{ fontWeight: 'bold',pb:2}} variant="button" display="block" gutterBottom>
                                 company
                             </Typography>
@@ -64,22 +64,22 @@ const FooterReall = () => {
                             </Typography>
                             <Box style={{backgroundColor:"transparent",padding:"0px"}} sx={{ opacity:".6",py:2}}>
                                 <Typography style={{display:"block"}} variant="body1" gutterBottom>
-                                    Shared hosting
+                                    Shared
                                 </Typography>
                                 <Typography style={{display:"block"}} variant="body1" gutterBottom>
-                                    Wordpress hosting
+                                    Wordpress
                                 </Typography>
                                 <Typography style={{display:"block"}} variant="body1" gutterBottom>
-                                    VPS hosting
+                                    VPS
                                 </Typography>
                                 <Typography style={{display:"block"}} variant="body1" gutterBottom>
-                                    Dedicated hosting
+                                    Dedicated
                                 </Typography>
                                 <Typography style={{display:"block"}} variant="body1" gutterBottom>
-                                    Reseller hosting
+                                    Reseller
                                 </Typography>
                                 <Typography style={{display:"block"}} variant="body1" gutterBottom>
-                                    Hosting features
+                                    Hosting
                                 </Typography>
                             </Box>
                         </Box>

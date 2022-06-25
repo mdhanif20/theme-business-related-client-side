@@ -61,7 +61,7 @@ const Navbar = () => {
               <img src={logo} width="50px" height="50px" alt="" />
               </Typography>
 
-              <Box sx={{ flexGrow: 1,mx:2, display: { xs: 'flex', sm:"flex" , md: 'none' },justifyContent: 'flex-end'  }}>
+              <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm:"flex" , md: 'none' },justifyContent: 'flex-end'  }}>
                 <IconButton
                   size="large"
                   aria-label="account of current user"
@@ -70,7 +70,7 @@ const Navbar = () => {
                   onClick={handleOpenNavMenu}
                   color="inherit"
                 >
-                  <MenuIcon  style={{color:"#fff"}}/>
+                  <MenuIcon  style={{color:"#fff",margin:"0px 20px"}}/>
                 </IconButton>
                 <Menu
                   id="menu-appbar"
