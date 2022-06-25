@@ -14,7 +14,7 @@ const useStyle = makeStyles({
         backgroundColor:"#9940fb9e"
     },
     contactAreaSmall:{
-        backgroundColor:'red',
+        backgroundColor:'#9940fb9e',
         paddingStart:"20px"
     },
     contact:{

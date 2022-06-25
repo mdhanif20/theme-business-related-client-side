@@ -72,6 +72,8 @@ const useStyle = makeStyles({
     },
     smallImg:{
         width:"80%",
+         marginLeft:"6%",
+        marginRight:"6%", 
         border:'15px solid #fff',
         borderRadius: "10px 10px 0px 0px",
         marginBottom: "-7px",

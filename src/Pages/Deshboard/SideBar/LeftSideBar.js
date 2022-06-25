@@ -213,7 +213,7 @@ const LeftSideBar = () => {
                                 <Typography style={{fontWeight:500}}className={classes.textSmall}>MakeAdmin</Typography>
                             </Button>
                         </Link>
-                        <Link className={classes.linkDesign} to="/deshboard/makeadmin">
+                        <Link className={classes.linkDesign} to="/deshboard/allPurchasedTheme">
                             <Button className={classes.itemSmall}>
                                 <ShoppingCartIcon style={{fontSize:"25px"}}  className={classes.iconSmall}/>
                                 <Typography style={{fontWeight:500}}className={classes.textSmall}>Purchased</Typography>
