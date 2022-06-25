@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import StorageIcon from '@mui/icons-material/Storage';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 const useStyle = makeStyles({
     container:{
@@ -132,11 +134,18 @@ const LeftSideBar = () => {
                                 <Typography style={{fontWeight:500}}className={classes.text}>Make Admin</Typography>
                             </Button>
                         </Link>
+                        <Link className={classes.linkDesign} to="/deshboard/allPurchasedTheme">
+                        <Button className={classes.item}>
+                            <ShoppingCartIcon style={{fontSize:"25px"}} className={classes.icon}/>
+                                <Typography style={{fontWeight:500}} className={classes.text}>Purchased</Typography>
+                        </Button>
+                    </Link>
                         </Box>
                    
 
                    }
 
+                    
                     <Link className={classes.linkDesign} to="/deshboard/purchasedStorage">
                         <Button className={classes.item}>
                             <StorageIcon style={{fontSize:"25px"}} className={classes.icon}/>
@@ -202,6 +211,12 @@ const LeftSideBar = () => {
                             <Button className={classes.itemSmall}>
                                 <ManageAccountsIcon style={{fontSize:"25px"}}  className={classes.iconSmall}/>
                                 <Typography style={{fontWeight:500}}className={classes.textSmall}>MakeAdmin</Typography>
+                            </Button>
+                        </Link>
+                        <Link className={classes.linkDesign} to="/deshboard/makeadmin">
+                            <Button className={classes.itemSmall}>
+                                <ShoppingCartIcon style={{fontSize:"25px"}}  className={classes.iconSmall}/>
+                                <Typography style={{fontWeight:500}}className={classes.textSmall}>Purchased</Typography>
                             </Button>
                         </Link>
                         </Box>

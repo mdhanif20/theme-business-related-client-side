@@ -23,6 +23,9 @@ import DomainPurchase from './Pages/Deshboard/Purchased/Domain/DomainPurchase';
 import HostingPurchase from './Pages/Deshboard/Purchased/Hosting/HostingPurchase';
 import Contact from './Pages/Contact/Contact';
 import StoragePurchased from './Pages/Deshboard/Purchased/Storage/StoragePurchased';
+import AllPurchasedTheme from './Pages/Deshboard/AllPurchased/AllPurchasedTheme';
+import AllPurchasedDomain from './Pages/Deshboard/AllPurchased/AllPurchasedDomain';
+import AllPurchasedHosting from './Pages/Deshboard/AllPurchased/AllPurchasedHosting';
 
 
 
@@ -51,6 +54,9 @@ function App() {
                           <Route path="editTheme" element={<ThemesAdmin/>}/>
                           <Route path="editDomain" element={<DomainAdmin/>}/>
                           <Route path="editHosting" element={<HostingAdmin/>}/>
+                          <Route path="allPurchasedTheme" element={<AllPurchasedTheme/>}/>
+                          <Route path="allPurchasedDomain" element={<AllPurchasedDomain/>}/>
+                          <Route path="allPurchasedHosting" element={<AllPurchasedHosting/>}/>
                           
                       </Route>
                   </Route>
