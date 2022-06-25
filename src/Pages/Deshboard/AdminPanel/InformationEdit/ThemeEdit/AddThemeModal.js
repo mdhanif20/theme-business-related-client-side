@@ -32,7 +32,7 @@ const AddThemeModal = ({openBooking,handleBookingClose}) => {
   
    
     const addTheme = e =>{
-        fetch("http://localhost:5000/deshboard/addTheme",{
+        fetch("https://calm-anchorage-79518.herokuapp.com/deshboard/addTheme",{
         method:"POST",
         headers:{
           "content-type":"application/json"

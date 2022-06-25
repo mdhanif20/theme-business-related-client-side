@@ -28,7 +28,7 @@ const AddNewHosting = ({openBooking,handleBookingClose}) => {
   
    
     const addhosting = e =>{
-        fetch("http://localhost:5000/deshboard/hosting",{
+        fetch("https://calm-anchorage-79518.herokuapp.com/deshboard/hosting",{
         method:"POST",
         headers:{
           "content-type":"application/json"

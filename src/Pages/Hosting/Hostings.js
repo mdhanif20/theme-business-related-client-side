@@ -9,7 +9,7 @@ import FooterReall from '../Shared/FooterReall/FooterReall';
 const Hostings = () => {
     const [hostings,setHosting] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/hosting")
+        fetch("https://calm-anchorage-79518.herokuapp.com/hosting")
         .then(res => res.json())
         .then(data => setHosting(data))
     },[])

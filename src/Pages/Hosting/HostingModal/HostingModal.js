@@ -43,7 +43,7 @@ const HostingModal = ({openBooking,handleBookingClose,hosting,Price}) => {
         price: calculatedPrice,
         time:year
       }
-        fetch("http://localhost:5000/hosting",{
+        fetch("https://calm-anchorage-79518.herokuapp.com/hosting",{
         method:"POST",
         headers:{
           "content-type":"application/json"

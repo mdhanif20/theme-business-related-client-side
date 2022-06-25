@@ -83,7 +83,7 @@ const Domain = () => {
     };
 
     useEffect(()=>{
-        fetch("http://localhost:5000/domain")
+        fetch("https://calm-anchorage-79518.herokuapp.com/domain")
         .then(res => res.json())
         .then(data => setSuffixs(data))
     },[])

@@ -96,7 +96,7 @@ const Storage = () => {
     }    
 
       useEffect(()=>{
-            fetch("http://localhost:5000/storage")
+            fetch("https://calm-anchorage-79518.herokuapp.com/storage")
             .then(res => res.json())
             .then(data => setHostings(data))
         },[getid])

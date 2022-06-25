@@ -9,7 +9,7 @@ import FooterReall from './../../Shared/FooterReall/FooterReall';
 const PageThemes = () => {
     const [themes,setThemes]= useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/themes")
+        fetch("https://calm-anchorage-79518.herokuapp.com/themes")
         .then(res=>res.json())
         .then(data => setThemes(data))
     },[]);

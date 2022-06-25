@@ -63,7 +63,7 @@ const useFirebase = () =>{
   //save user on database
   const saveUser = (email,displayname,method)=>{
     const user = {email, displayname};
-    fetch('http://localhost:5000/users',{
+    fetch('https://calm-anchorage-79518.herokuapp.com/users',{
       method:method,
       headers:{
         'content-type':'application/json'
@@ -93,7 +93,7 @@ const useFirebase = () =>{
 
     //admin panel login
     useEffect(()=>{
-      const url = `http://localhost:5000/users/${users.email}`;
+      const url = `https://calm-anchorage-79518.herokuapp.com/users/${users.email}`;
       fetch(url)
       .then(res=>res.json())
       .then(data => setAdmin(data.admin))

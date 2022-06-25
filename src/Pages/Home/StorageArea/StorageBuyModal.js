@@ -10,7 +10,7 @@ const StorageBuyModal = ({openBooking,handleBookingClose,data}) => {
    
    
     const addStorage = e =>{
-        fetch("http://localhost:5000/purchasedStorage",{
+        fetch("https://calm-anchorage-79518.herokuapp.com/purchasedStorage",{
         method:"POST",
         headers:{
           "content-type":"application/json"

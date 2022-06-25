@@ -36,7 +36,7 @@ const HostingAdmin = () => {
 
     //load theme
     useEffect(()=>{
-        fetch("http://localhost:5000/hosting")
+        fetch("https://calm-anchorage-79518.herokuapp.com/hosting")
         .then(res=> res.json())
         .then(data => setHostings(data))
     },[openBooking,openUpdate])
@@ -46,7 +46,7 @@ const HostingAdmin = () => {
   const deleteHosting = id =>{
         const proceed = window.confirm("Are you sure, you want to delete?")
         if(proceed){
-            const url = `http://localhost:5000/hosting/${id}`;
+            const url = `https://calm-anchorage-79518.herokuapp.com/hosting/${id}`;
             fetch(url,{
                 method:"DELETE"
             })

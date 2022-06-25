@@ -28,7 +28,7 @@ const UpdateDomainModal = ({openBooking,handleBookingClose,id,domain}) => {
   }
 
     const updatedomainData = id =>{
-            const url = `http://localhost:5000/domain/${id}`;
+            const url = `https://calm-anchorage-79518.herokuapp.com/domain/${id}`;
             fetch(url,{
                 method:"PUT",
                 headers:{

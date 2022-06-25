@@ -32,7 +32,7 @@ const AddDomainModal = ({openBooking,handleBookingClose}) => {
   
    
     const addDomain = e =>{
-        fetch("http://localhost:5000/deshboard/domain",{
+        fetch("https://calm-anchorage-79518.herokuapp.com/deshboard/domain",{
         method:"POST",
         headers:{
           "content-type":"application/json"

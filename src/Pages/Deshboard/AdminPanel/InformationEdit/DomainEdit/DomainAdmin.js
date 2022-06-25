@@ -37,7 +37,7 @@ const DomainAdmin = () => {
 
     //load theme
     useEffect(()=>{
-        fetch("http://localhost:5000/domain")
+        fetch("https://calm-anchorage-79518.herokuapp.com/domain")
         .then(res=> res.json())
         .then(data => setDomains(data))
     },[openBooking,openUpdate])
@@ -47,7 +47,7 @@ const DomainAdmin = () => {
   const deleteDomain = id =>{
         const proceed = window.confirm("Are you sure, you want to delete?")
         if(proceed){
-            const url = `http://localhost:5000/domain/${id}`;
+            const url = `https://calm-anchorage-79518.herokuapp.com/domain/${id}`;
             fetch(url,{
                 method:"DELETE"
             })

@@ -29,7 +29,7 @@ const BuyThemeModal = ({openBooking,handleBookingClose,data}) => {
           website:`${websiteName}`,
           price:`${price}`
       }
-      fetch("http://localhost:5000/themeBuy",{
+      fetch("https://calm-anchorage-79518.herokuapp.com/themeBuy",{
       method:"POST",
       headers:{
         "content-type":"application/json"

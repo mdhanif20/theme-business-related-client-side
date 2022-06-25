@@ -23,7 +23,7 @@ const HostingPurchase = () => {
     }
 
     useEffect(()=>{
-        const url = `http://localhost:5000/purchasedHosting?email=${users.email}`;
+        const url = `https://calm-anchorage-79518.herokuapp.com/purchasedHosting?email=${users.email}`;
          fetch(url,{
            headers:{
              'authorization':`Bearer ${token}`
