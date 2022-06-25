@@ -74,7 +74,7 @@ const DataAnalysis = () => {
         setHeader(a)
     }
     return (
-        <Container>
+        <Container sx={{py:10}}>
             <Grid container>
                 <Grid md={8} sx={{textAlign:"start"}}>
                     <h2 style={{fontSize:"2.5rem",fontWeight:"300",marginBottom:"10px"}}> {header} </h2>

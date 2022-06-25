@@ -54,9 +54,9 @@ const Packages = () => {
                             </span>
                         </Box>
                     </Grid>
-                    <Grid xs={12} md={6} sx={{display:"flex",my:5}}>
+                    <Grid xs={12} md={6} sx={{display:{xs:"block",sm:"flex",md:"flex"},my:5}}>
                         
-                            <Card sx={{width:"50%",textAlign:"center",py:5,px:1}}>
+                            <Card sx={{width:{xs:"85%",sm:"50%"},margin:"auto",textAlign:"center",py:5,px:{xs:2,sm:1}}}>
                                 <Box>
                                 <Typography variant="button" display="block" sx={{fontWeight:"600"}} gutterBottom>
                                     Business
@@ -96,7 +96,7 @@ const Packages = () => {
                             </Card>
                       
                         
-                            <Card sx={{width:"50%",textAlign:"center",py:5,px:1}}>
+                            <Card sx={{width:{xs:"85%",sm:"50%"},margin:"auto",textAlign:"center",py:5,px:{xs:2,sm:1},mt:{xs:5,sm:0}}}>
                                 <Box>
                                 <Typography variant="button" display="block" sx={{fontWeight:"600"}} gutterBottom>
                                     Business

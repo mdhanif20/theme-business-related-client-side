@@ -60,7 +60,7 @@ const useStyle = makeStyles({
 const GetHost = () => {
     const classes = useStyle();
     return (
-        <Container style={{padding:"70px 0px",marginBottom:"50px"}}>
+        <Container style={{padding:"70px 0px",margin:"50px auto"}}>
             <Box sx={{textAlign:"center",pb:5}}>
                 <h1 style={{fontWeight:"400",fontSize:"2.5rem"}}>
                 Go with GetHost.
