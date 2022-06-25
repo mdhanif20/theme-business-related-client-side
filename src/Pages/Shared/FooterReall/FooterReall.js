@@ -62,22 +62,22 @@ const FooterReall = () => {
                                PRODUCTS
                             </Typography>
                             <Box style={{backgroundColor:"transparent",padding:"0px"}} sx={{ opacity:".6",py:2}}>
-                                <Typography variant="body1" gutterBottom>
+                                <Typography style={{display:"block"}} variant="body1" gutterBottom>
                                     Shared hosting
                                 </Typography>
-                                <Typography variant="body1" gutterBottom>
+                                <Typography style={{display:"block"}} variant="body1" gutterBottom>
                                     Wordpress hosting
                                 </Typography>
-                                <Typography variant="body1" gutterBottom>
+                                <Typography style={{display:"block"}} variant="body1" gutterBottom>
                                     VPS hosting
                                 </Typography>
-                                <Typography variant="body1" gutterBottom>
+                                <Typography style={{display:"block"}} variant="body1" gutterBottom>
                                     Dedicated hosting
                                 </Typography>
-                                <Typography variant="body1" gutterBottom>
+                                <Typography style={{display:"block"}} variant="body1" gutterBottom>
                                     Reseller hosting
                                 </Typography>
-                                <Typography variant="body1" gutterBottom>
+                                <Typography style={{display:"block"}} variant="body1" gutterBottom>
                                     Hosting features
                                 </Typography>
                             </Box>
@@ -158,9 +158,9 @@ const FooterReall = () => {
                 </Grid>
             </Container>
             <Box sx={{borderTop:"1px solid rgb(203 203 203)"}}>
-            <Typography sx={{py:2,px:1}} variant="subtitle2" gutterBottom component="div">
+            <p style={{padding:"10px 0px", textAlign:'start'}}>
             © 2022 Hogash.com | All rights reserved.
-            </Typography>
+            </p>
             </Box>
         </Box>
     );
