@@ -32,7 +32,7 @@ const FooterReall = () => {
     const classes = useStyle();
     return (
         <> 
-        <Box>
+        <Box sx={{display:{xs:"none",sm:"block"}}}>
         <p style={{position:"fixed",right:"5px",bottom:"40px",zIndex:100}}>
             <a href="#appBar" style={{color:"#8200B9"}}>
             < KeyboardControlKeyIcon style={{fontSize:"2.8rem"}} />
@@ -44,12 +44,12 @@ const FooterReall = () => {
             </a>
         </p>
        
-        </Box>
+        </Box> 
         <Box id="footer" sx={{pt:10}} className={classes.fullArea}>
             <Container>
                 <Grid container spacing={2}>
-                    <Grid xs={12} sm={3}>
-                    <Box sx={{textAlign:"start",my:5,ml:{xs:-3,sm:-2,md:0}}} style={{textAlign:"start",color:"#000000",background:"none",border:"0px",borderRadius:"0px"}} >
+                    <Grid xs={12} sm={3} >
+                    <Box sx={{textAlign:"start",my:5,mx:{xs:1,sm:0}}} style={{textAlign:"start",color:"#000000",background:"none",border:"0px",borderRadius:"0px"}} >
                             <Typography  sx={{ fontWeight: 'bold',pb:2}} variant="button" display="block" gutterBottom>
                                 company
                             </Typography>
@@ -75,7 +75,7 @@ const FooterReall = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid xs={12} sm={3} style={{color:"black"}} sx={{display:{xs:"none",sm:"block"}}}>
+                    <Grid xs={12} sm={3} style={{color:"black"}} sx={{}}>
                     <Box style={{border:"none",padding:0,boxShadow:'none',background:"none"}} sx={{textAlign:"start",my:5,display:{xs:"none",sm:"block"}}} >
                             <Typography  sx={{ fontWeight: 'bold',pb:2}} variant="button" display="block" gutterBottom>
                                PRODUCTS
@@ -102,8 +102,8 @@ const FooterReall = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid xs={12} sm={3} sx={{display:{xs:"none",sm:"none",md:"block"}}}>
-                    <Box sx={{textAlign:"start",py:5,display:{xs:"none",sm:"none",md:"block"}}} >
+                    <Grid xs={12} sm={3} sx={{}}>
+                    <Box sx={{textAlign:"start",py:5,display:{xs:"none",sm:"block"}}} >
                             <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                              SUPPORT
                             </Typography>
@@ -130,16 +130,16 @@ const FooterReall = () => {
                         </Box>
                     </Grid>
                     <Grid xs={12} sm={3}>
-                    <Box style={{width:'100%',display:"block"}} sx={{textAlign:"start",py:5}} >
+                    <Box style={{width:'100%',display:"block"}} sx={{textAlign:"start",py:5,mx:{xs:1,sm:0}}} >
                             <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                                 Follow us
                             </Typography>
                             <Box style={{width:'100%'}} sx={{display: "flex", justifyContent: "space-around",my:3}}>
-                                <span><InstagramIcon/></span>
-                                <span><FacebookIcon/></span>
-                                <span><TwitterIcon/></span>
-                                <span><YouTubeIcon/></span>
-                                <span><GitHubIcon/></span>
+                                <a target="_blank" href="https://web.facebook.com/?_rdc=1&_rdr"><InstagramIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100055606685759"><FacebookIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100055606685759"><TwitterIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100055606685759"><YouTubeIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100055606685759"><GitHubIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
                             </Box>
                                 <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                                 SUBSCRIBE US
