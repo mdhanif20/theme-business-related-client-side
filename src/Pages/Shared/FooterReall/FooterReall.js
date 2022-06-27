@@ -12,9 +12,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Button from '@mui/material/Button';
-import Fab from '@mui/material/Fab';
-import EditIcon from '@mui/icons-material/Edit';
-import NavigationIcon from '@mui/icons-material/Navigation';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardControlKeyIcon from '@mui/icons-material/KeyboardControlKey';
 
@@ -33,14 +30,14 @@ const FooterReall = () => {
     return (
         <> 
         <Box sx={{display:{xs:"none",sm:"block"}}}>
-        <p style={{position:"fixed",right:"5px",bottom:"40px",zIndex:100}}>
-            <a href="#appBar" style={{color:"#8200B9"}}>
-            < KeyboardControlKeyIcon style={{fontSize:"2.8rem"}} />
+        <p style={{position:"fixed",right:"5px",bottom:"30px",zIndex:100}}>
+            <a href="#appBar" >
+            < KeyboardControlKeyIcon sx={{color:"#fff",backgroundColor:"#8200B9"}} />
             </a>
         </p>
         <p style={{position:"fixed",right:"4px",bottom:"0px",zIndex:100}}>
-            <a href="#footer" style={{color:"#8200B9"}}>
-            < KeyboardArrowDownIcon style={{fontSize:"3rem"}}/>
+            <a href="#footer">
+            < KeyboardArrowDownIcon sx={{color:"#fff",backgroundColor:"#8200B9"}}/>
             </a>
         </p>
        
@@ -135,11 +132,11 @@ const FooterReall = () => {
                                 Follow us
                             </Typography>
                             <Box style={{width:'100%'}} sx={{display: "flex", justifyContent: "space-around",my:3}}>
-                                <a target="_blank" href="https://web.facebook.com/?_rdc=1&_rdr"><InstagramIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
-                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100055606685759"><FacebookIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
-                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100055606685759"><TwitterIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
-                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100055606685759"><YouTubeIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
-                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100055606685759"><GitHubIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" rel="noreferrer" href="https://web.facebook.com/?_rdc=1&_rdr"><InstagramIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=100055606685759"><FacebookIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=100055606685759"><TwitterIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=100055606685759"><YouTubeIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
+                                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=100055606685759"><GitHubIcon sx={{color:"#8200B9",cursor:"pointer"}}/></a>
                             </Box>
                                 <Typography  sx={{ fontWeight: 'bold'}} variant="button" display="block" gutterBottom>
                                 SUBSCRIBE US

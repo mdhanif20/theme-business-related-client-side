@@ -64,9 +64,9 @@ const PageTheme = ({data}) => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button target="_blank" href={`${data.clientCodeLink}`} size="small">Client Side Code</Button>
-                                    <Button target="_blank" href={`${data.serverCodeLink}`} size="small">Server Side Code</Button>
-                                    <Button target="_blank" href={`${data.liveSide}`} size="small">Live Side</Button>
+                                    <Button target="_blank" rel="noreferrer" href={`${data.clientCodeLink}`} size="small">Client Side Code</Button>
+                                    <Button target="_blank" rel="noreferrer" href={`${data.serverCodeLink}`} size="small">Server Side Code</Button>
+                                    <Button target="_blank" rel="noreferrer" href={`${data.liveSide}`} size="small">Live Side</Button>
                                 </CardActions>
                                 <Button 
                                 onClick={handleBookingOpen}
