@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import bg from "../../../images/background.png";
 import smallBg from "../../../images/smallScreenbg.png";
 import { Link } from 'react-router-dom';
+import Stack from '@mui/material/Stack';
 
 const useStyle = makeStyles({
     bgImage:{
@@ -34,7 +35,7 @@ const Slider = () => {
     const classes = useStyle();
     return (
         <>
-        <Box sx={{pb:10,display:{xs:"none",sm:"none",md:"block"}}}  className={classes.bgImage}>
+        <Stack sx={{pb:10,display:{xs:"none",sm:"none",md:"block"}}}  className={classes.bgImage}>
             <Grid  container>
                 <Grid item xs={12} md={6}>
                 <Box   sx={{textAlign:"start",ml:{xs:5,md:15},my:30}}>
@@ -52,8 +53,8 @@ const Slider = () => {
                 </Box>
                 </Grid>
             </Grid>
-        </Box>
-        <Box  sx={{pb:10,display:{xs:"flex",sm:"flex",md:"none"}}}  className={classes.smallScreenbgImg}>
+        </Stack>
+        <Stack  sx={{pb:10,display:{xs:"block",sm:"block",md:"none"}}}  className={classes.smallScreenbgImg}>
             <Grid  container>
                 <Grid item xs={12} md={6}>
                 <Box   sx={{textAlign:"start",ml:{xs:5,md:20},my:30}}>
@@ -71,7 +72,7 @@ const Slider = () => {
                 </Box>
                 </Grid>
             </Grid>
-        </Box>
+        </Stack>
         </>
     );
 };
