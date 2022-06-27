@@ -35,7 +35,7 @@ const FooterReall = () => {
             < KeyboardControlKeyIcon sx={{color:"#fff",backgroundColor:"#8200B9"}} />
             </a>
         </p>
-        <p style={{position:"fixed",right:"4px",bottom:"0px",zIndex:100}}>
+        <p style={{position:"fixed",right:"5px",bottom:"0px",zIndex:100}}>
             <a href="#footer">
             < KeyboardArrowDownIcon sx={{color:"#fff",backgroundColor:"#8200B9"}}/>
             </a>

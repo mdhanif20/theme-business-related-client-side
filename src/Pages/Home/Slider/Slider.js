@@ -34,8 +34,8 @@ const Slider = () => {
     const classes = useStyle();
     return (
         <>
-        <Box sx={{pb:10,display:{xs:"none",sm:"none",md:"flex"}}} className={classes.bgImage}>
-            <Grid container>
+        <Box sx={{pb:10,display:{xs:"none",sm:"none",md:"block"}}}  className={classes.bgImage}>
+            <Grid  container>
                 <Grid item xs={12} md={6}>
                 <Box   sx={{textAlign:"start",ml:{xs:5,md:15},my:30}}>
                     <Typography variant="h2" sx={{fontSize:"2.75rem"}} gutterBottom component="div">
@@ -53,8 +53,8 @@ const Slider = () => {
                 </Grid>
             </Grid>
         </Box>
-        <Box sx={{pb:10,display:{xs:"flex",sm:"flex",md:"none"}}} className={classes.smallScreenbgImg}>
-            <Grid container>
+        <Box  sx={{pb:10,display:{xs:"flex",sm:"flex",md:"none"}}}  className={classes.smallScreenbgImg}>
+            <Grid  container>
                 <Grid item xs={12} md={6}>
                 <Box   sx={{textAlign:"start",ml:{xs:5,md:20},my:30}}>
                     <Typography variant="h2" sx={{fontSize:"2.30rem",color:"#fff"}} gutterBottom component="div">
