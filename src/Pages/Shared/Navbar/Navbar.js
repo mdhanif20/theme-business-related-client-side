@@ -163,7 +163,7 @@ const Navbar = () => {
                 
                   <Button
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: '#0F0C0B', display: 'block' }}>
+                    sx={{ py: 2, color: '#0F0C0B', display: 'block' }}>
                       <Link style={{textDecoration:"none",color:"#fff"}} to="/">
                         <Typography textAlign="center">Home</Typography>
                       </Link>
@@ -172,7 +172,7 @@ const Navbar = () => {
                 
                   <Button
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: '#0F0C0B', display: 'block' }}>
+                    sx={{ py: 2, color: '#0F0C0B', display: 'block' }}>
                       <Link style={{textDecoration:"none",color:"#fff"}} to="/themes">
                          <Typography textAlign="center">Themes</Typography>
                       </Link>
