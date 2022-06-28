@@ -14,13 +14,25 @@ const useStyle = makeStyles({
         background:`url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "top"
+        backgroundPosition: "top",
+        '@media(min-width: 851px)' : {
+            display:'block'
+          },
+        '@media(max-width: 850px)' : {
+            display:'none'
+          }
     },
     smallScreenbgImg:{
         background:`url(${smallBg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center"
+        backgroundPosition: "center",
+        '@media(max-width: 850px)' : {
+            display:'block'
+          },
+        '@media(min-width: 851px)' : {
+            display:'none'
+          }
     },
     sliderButton:{
         background:"linear-gradient(to right, #564CF9, #CB34FF)",
@@ -35,7 +47,7 @@ const Slider = () => {
     const classes = useStyle();
     return (
         <>
-        <Box sx={{pb:10,display:{xs:"none",sm:"none",md:"block"}}}  className={classes.bgImage}>
+        <Box sx={{pb:10}}  className={classes.bgImage}>
             <Grid  container>
                 <Grid item xs={12} md={6}>
                 <Box   sx={{textAlign:"start",ml:{xs:5,md:15},my:30}}>
@@ -54,7 +66,7 @@ const Slider = () => {
                 </Grid>
             </Grid>
         </Box>
-        <Box  sx={{pb:10,display:{xs:"block",sm:"block",md:"none"}}}  className={classes.smallScreenbgImg}>
+        <Box  sx={{pb:10}}  className={classes.smallScreenbgImg}>
             <Grid  container>
                 <Grid item xs={12} md={6}>
                 <Box   sx={{textAlign:"start",ml:{xs:5,md:20},my:30}}>
