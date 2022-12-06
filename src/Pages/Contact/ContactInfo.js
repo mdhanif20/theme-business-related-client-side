@@ -11,7 +11,7 @@ import ContactFormHeader from './ContactFormHeader';
 
 const useStyle = makeStyles({
     contactArea:{
-        backgroundColor:"#9940fb9e"
+        backgroundColor:"#8200B9"
     },
     contactAreaSmall:{
         backgroundColor:'#9940fb9e',
@@ -21,7 +21,7 @@ const useStyle = makeStyles({
         textAlign:"start"
     },
     icon:{
-        color:"#00ffff",
+        color:"#fff",
         padding:"3px",
         border:"1px solid",
         borderRadius:'20%',
@@ -46,7 +46,7 @@ const ContactInfo = () => {
                     Chandanish, Chittagong
                     </Typography>
                         <Box sx={{mt:{xs:5,sm:20}}}>
-                        <Typography sx={{fontSize:"1.1rem",color:"#00ffff",pb:1}} variant="button" display="block" gutterBottom>
+                        <Typography sx={{fontSize:"1.1rem",color:"#fff",pb:1}} variant="button" display="block" gutterBottom>
                             Follow us
                         </Typography>
                             <Box sx={{display:"flex"}}>
@@ -55,7 +55,7 @@ const ContactInfo = () => {
                                 <Box><TwitterIcon className={classes.icon}/></Box>
                                 <Box><LinkedInIcon className={classes.icon}/></Box>
                             </Box>
-                            <Typography sx={{color:"#00ffff",pt:1}} variant="subtitle2" gutterBottom component="div">
+                            <Typography sx={{color:"#fff",pt:1}} variant="subtitle2" gutterBottom component="div">
                             @2021 Privacy Policy
                             </Typography>
                         </Box>

@@ -29,16 +29,16 @@ const useStyle = makeStyles({
         padding: "7px 20px 7px 10px",
         border: "0",
         borderRadius: "25px",
-        backgroundColor: "#b540fb",
+        backgroundColor: "black",
         color: "#fff",
         cursor:"pointer",
         fontWeight:" 500",
     },
     button:{
-        backgroundColor: "#b540fb",
+        backgroundColor: "black",
         fontSize:"1.3rem",
         "&:hover":{
-            backgroundColor: "#b540fb",
+            backgroundColor: "black",
         }
     }
 })

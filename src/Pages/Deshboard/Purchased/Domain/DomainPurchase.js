@@ -23,7 +23,7 @@ const DomainPurchase = () => {
     }
 
     useEffect(()=>{
-        const url = `https://calm-anchorage-79518.herokuapp.com/purchasedDomain?email=${users.email}`;
+        const url = `https://theme-domain-hosting.onrender.com/purchasedDomain?email=${users.email}`;
          fetch(url,{
            headers:{
              'authorization':`Bearer ${token}`

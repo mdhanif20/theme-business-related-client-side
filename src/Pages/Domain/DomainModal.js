@@ -41,7 +41,7 @@ const DomainModal = ({ openBooking,handleBookingClose,Price,suffixValu, writtenD
             time:`${year}year`,
             price:`${calculatedPrice}`
         }
-        fetch("https://calm-anchorage-79518.herokuapp.com/domain",{
+        fetch("https://theme-domain-hosting.onrender.com/domain",{
         method:"POST",
         headers:{
           "content-type":"application/json"

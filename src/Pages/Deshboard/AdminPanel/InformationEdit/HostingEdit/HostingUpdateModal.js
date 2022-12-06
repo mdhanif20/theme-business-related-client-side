@@ -30,7 +30,7 @@ const HostingUpdateModal = ({openBooking,handleBookingClose,hosting}) => {
   }
 
     const updateHostingData = id =>{
-            const url = `https://calm-anchorage-79518.herokuapp.com/hosting/${id}`;
+            const url = `https://theme-domain-hosting.onrender.com/hosting/${id}`;
             fetch(url,{
                 method:"PUT",
                 headers:{

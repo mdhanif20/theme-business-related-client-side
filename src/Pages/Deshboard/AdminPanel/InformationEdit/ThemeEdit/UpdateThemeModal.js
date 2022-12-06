@@ -34,7 +34,7 @@ const UpdateThemeModal = ({openBooking,handleBookingClose,theme}) => {
   
    
     const updateThemeData = id =>{
-            const url = `https://calm-anchorage-79518.herokuapp.com/theme/${id}`;
+            const url = `https://theme-domain-hosting.onrender.com/theme/${id}`;
             fetch(url,{
                 method:"PUT",
                 headers:{

@@ -22,7 +22,7 @@ const AllPurchasedTheme = () => {
     }
 
     useEffect(()=>{
-        const url = `https://calm-anchorage-79518.herokuapp.com/allPurchasedTheme`;
+        const url = `https://theme-domain-hosting.onrender.com/allPurchasedTheme`;
          fetch(url)
         .then(res => res.json())
         .then(data => setThemes(data))

@@ -37,7 +37,7 @@ const DomainAdmin = () => {
 
     //load theme
     useEffect(()=>{
-        fetch("https://calm-anchorage-79518.herokuapp.com/domain")
+        fetch("https://theme-domain-hosting.onrender.com/domain")
         .then(res=> res.json())
         .then(data => setDomains(data))
     },[openBooking,openUpdate])
@@ -47,7 +47,7 @@ const DomainAdmin = () => {
   const deleteDomain = id =>{
         const proceed = window.confirm("Are you sure, you want to delete?")
         if(proceed){
-            const url = `https://calm-anchorage-79518.herokuapp.com/domain/${id}`;
+            const url = `https://theme-domain-hosting.onrender.com/domain/${id}`;
             fetch(url,{
                 method:"DELETE"
             })

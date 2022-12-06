@@ -28,7 +28,7 @@ const AddNewHosting = ({openBooking,handleBookingClose}) => {
   
    
     const addhosting = e =>{
-        fetch("https://calm-anchorage-79518.herokuapp.com/deshboard/hosting",{
+        fetch("https://theme-domain-hosting.onrender.com/deshboard/hosting",{
         method:"POST",
         headers:{
           "content-type":"application/json"

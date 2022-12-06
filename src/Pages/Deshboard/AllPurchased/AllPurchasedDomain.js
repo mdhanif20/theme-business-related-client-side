@@ -22,7 +22,7 @@ const AllPurchasedDomain = () => {
     }
 
     useEffect(()=>{
-        const url = `https://calm-anchorage-79518.herokuapp.com/allPurchasedDomain`;
+        const url = `https://theme-domain-hosting.onrender.com/allPurchasedDomain`;
          fetch(url)
         .then(res => res.json())
         .then(data => setDomains(data))

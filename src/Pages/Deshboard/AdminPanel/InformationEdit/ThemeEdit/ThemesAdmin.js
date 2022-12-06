@@ -37,7 +37,7 @@ const ThemesAdmin = () => {
     }
     //load theme
     useEffect(()=>{
-        fetch("https://calm-anchorage-79518.herokuapp.com/themes")
+        fetch("https://theme-domain-hosting.onrender.com/themes")
         .then(res=> res.json())
         .then(data => setThemes(data))
     },[openBooking,openUpdate])
@@ -47,7 +47,7 @@ const ThemesAdmin = () => {
   const deleteTheme = id =>{
         const proceed = window.confirm("Are you sure, you want to delete?")
         if(proceed){
-            const url = `https://calm-anchorage-79518.herokuapp.com/theme/${id}`;
+            const url = `https://theme-domain-hosting.onrender.com/theme/${id}`;
             fetch(url,{
                 method:"DELETE"
             })

@@ -96,7 +96,7 @@ const Storage = () => {
     }    
 
       useEffect(()=>{
-            fetch("https://calm-anchorage-79518.herokuapp.com/storage")
+            fetch("https://theme-domain-hosting.onrender.com/storage")
             .then(res => res.json())
             .then(data => setStorages(data))
         },[getid])

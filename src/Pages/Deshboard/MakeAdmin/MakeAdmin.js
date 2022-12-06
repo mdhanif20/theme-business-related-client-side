@@ -44,7 +44,7 @@ const MakeAdmin = () => {
     }
 
     const addAdmin = e =>{
-        fetch("https://calm-anchorage-79518.herokuapp.com/users/admin",{
+        fetch("https://theme-domain-hosting.onrender.com/users/admin",{
             method:"PUT",
             headers:{
                 'authorization':`Bearer ${token}`,

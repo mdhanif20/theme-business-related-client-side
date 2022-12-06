@@ -10,7 +10,7 @@ const Themes = () => {
     const [themes,setThemes]= useState([]);
 
     useEffect(()=>{
-        fetch("https://calm-anchorage-79518.herokuapp.com/themes")
+        fetch("https://theme-domain-hosting.onrender.com/themes")
         .then(res=>res.json())
         .then(data => setThemes(data))
     },[]);

@@ -23,7 +23,7 @@ const StoragePurchased = () => {
     }
 
     useEffect(()=>{
-        const url = `https://calm-anchorage-79518.herokuapp.com/purchasedStorage?email=${users.email}`;
+        const url = `https://theme-domain-hosting.onrender.com/purchasedStorage?email=${users.email}`;
          fetch(url,{
            headers:{
              'authorization':`Bearer ${token}`
